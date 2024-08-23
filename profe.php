@@ -23,7 +23,9 @@ tr, td{padding :5px}
         die("Conexion fallida: " . mysqli_connect_error());
     }
     else{
+        $query = "select * from usuario where nombre_usuario = $nombre_de_usuario;"; 
         $query = "insert into usuario values('$nombre_de_usuario','$nombre', '$apellido','$mail','$telefono','$password1');";
+        $resultado=mysqli_query($conexion, $query);
         $resultado=mysqli_query($conexion, $query);
         echo "Datos que hay en la base:\n";
 

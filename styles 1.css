@@ -1,31 +1,82 @@
+:root{
+    --colorcito:rgb(64, 192, 235);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
 header{
+    background-color:var(--colorcito);
+}
+#parte_de_arriba{
     display: flex;
     justify-content: space-between;
 }
+#pepo{
+    display: none;
+}
 #titlepr{
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: space-around;
+    font-family: fantasy;
+    color: black;
+    margin-top: 35px;
     
 }
-
+#titlepr:hover{
+    color: yellow;
+}
 #polito{
     display: flex;
-    
 }
-#botoncitosbro{
-    display: flex;
-    justify-content: center;
-    height:50% ;
-    width:20% ;
-    margin-top: 
-}
-#botoncitos{
-    display: flex;
+#carrito{
+    width: 3%;
     height: 100%;
-    justify-content: space-around;
+    margin-top: 45px;
+    background-color:var(--colorcito) ;
+    border: none;
 }
-.aylupita{
+#carrito:hover{
+    color: yellow;
+}
+#buscar{
+    display: flex;
+    height:50% ;
+    position: relative;
+    margin-top: 35px;
+}
+#login{
+    height: 20%;
+    width: 100%;
+    justify-content: space-around;
+    background-color:black;
+}
+#lupita{
     display:flex;
-    width: 20px;
-    height: 5px;
+    padding: 10px 15px;
+    color: black;
+    cursor: pointer;
+    background-color: var(--colorcito);
+    border:none
+}
+#lupita:hover{
+    color: yellow;
+}
+#texto{
+    text-align:justify;
+    font-family: monospace;
+    color: white;
+}
+#filtros{
+    display: flex;
+}
+#textofiltros{
+    margin-top: 20px;
+}
+#filtros{
+    flex-direction: column;
+}
+#color{
+    width: 10%;
+}
+.textofiltros{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
