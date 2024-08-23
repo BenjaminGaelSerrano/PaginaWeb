@@ -6,10 +6,56 @@
     border-style: solid;
     width: 15%;
     
+    
+}
+#divpadre{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 .garnacho{
     margin-top: 15px;
 }
 #inicio{
     margin-left: 16px;
+}
+#titulin{
+    display: flex;
+    justify-content: center;
+
+}
+#fotito{
+        height: 100px;
+        width: 100px;
+}
+#register{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#enviarbro{
+    width: 100%;
+    margin-top: 15px;
+    background-color: aqua;
+    border: none;
+}
+#enviarbro:hover{
+    
+    background-color: rgb(0, 183, 255);
+}
+#terminoscondiciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#eldegui{
+    display: flex;
+    
+    justify-content: center;
+}
+#preguntita{
+    margin-top: 0px;
+}
+#omgitsfooter{
+    width: 100%;
+    border-top: solid 2px;
 }
