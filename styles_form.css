@@ -1,0 +1,15 @@
+#log-in{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 15px;
+    border-style: solid;
+    width: 15%;
+    
+}
+.garnacho{
+    margin-top: 15px;
+}
+#inicio{
+    margin-left: 16px;
+}
