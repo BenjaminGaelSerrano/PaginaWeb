@@ -5,6 +5,7 @@
     padding: 15px;
     border-style: solid;
     width: 15%;
+    text-align: center;
     
     
 }
@@ -30,7 +31,8 @@
 }
 #register{
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "MoreEscudero";
+    text-align: center;
 }
 #enviarbro{
     width: 100%;
