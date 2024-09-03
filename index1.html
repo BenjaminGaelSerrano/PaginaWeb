@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles 1.css">
+    <link rel="stylesheet" href="styles1.css">
     <script src="https://kit.fontawesome.com/63b835f25a.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>deporweb.desd.com.ar</title>
 </head>
 <body>
-    <header>
+    <header><!--header gris con una sombra-->
         <div id="parte_de_arriba">
+            
             <div id="polito">
-                <img src="Captura 1.PNG" alt="logotipo" width="115px" height="115px">
+                <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
             </div>
             <div id="lema">
-                <h1 id="titlepr">SI ES DEPORTIVO, ACÁ ESTA</h1>
+                <h1 id="titlepr">SI ES DEPORTIVO, ESTÁ ACÁ</h1>
             </div>
             <div id="buscar">
                 <input type="text" placeholder="Buscar...">
@@ -23,8 +24,11 @@
             </div>
             <button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button>
             <div><button id="login"><p id="texto">Log-In</p></button></div>
+
         </div>
     </header>
+    <!--trabajar en la parde del header alinearlo
+    mejorar la distribucion y las fuentes que son una garcha-->
     <main>
         <div id="pagina">
             <div id="filtros">
@@ -146,16 +150,59 @@
                     <label for="genero">Unisex</label>
                 </div>    
             </div>     
-            <div id="productos">
-                <article class="producto_data">
-                    <img src="pelota.png" alt="imagen productos" class="producto_imagen">
-                    <h3 class="producto_nombre">Pelota de futbol Nike</h3>
-                    <span class="producto_precio">$20.00</span>
-                </article>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <!-- Agrupamos los productos en un solo item del carrusel -->
+                    <div class="carousel-item">
+                        <div class="product"><img src="/imagenes/pelota.png" alt="Pelota de futbol Nike"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/PALO-DE-HOCKEY-NASSAU-HERO-BLANCO-26-removebg-preview.png" alt="Palo de Hockey Nassau"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/pumas1-2b6f0c51ef391eb1b216312059688938-640-0-removebg-preview.png" alt="Camiseta de los Pumas"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/gorra-de-lycra-sporto-3-removebg-preview.png" alt="Gorro de Natación Porto"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/270323-800-auto-removebg-preview.png" alt="Camiseta Alternativa River Plate 2023/24"><div class="carousel-caption"></div></div>
+                    </div>
+                    <!-- Añadir más grupos de productos según sea necesario -->
+                    <!-- Ejemplo de otro grupo de productos -->
+                    <div class="carousel-item">
+                        <div class="product"><img src="/imagenes/juego-de-b--dminton-con-red-paletas-y-plumas-raqueta__1_-removebg-preview.png" alt="Producto 6"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/86-camiseta-argentina-2023-12-08t124022-587-2c0f8e92707186527717126996085954-1024-1024-removebg-preview.png" alt="Producto 7"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/images__1_-removebg-preview.png" alt="Producto 8"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/620109-mla27871688688_072018-o-4d356801de6824b22515438375078421-640-0-removebg-preview.png" alt="Producto 9"><div class="carousel-caption"></div></div>
+                        <div class="product"><img src="/imagenes/png-transparent-bicycle-saddles-selle-italia-cycling-bicycle-seat-bicycle-saddles-bicycle-racing-bicycle-black-thumbnail.png" alt="Producto 10"><div class="carousel-caption"></div></div>
+                    </div>
+                </div>
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
             </div>
         </div>                           
     </main>
     <footer>
     </footer>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelector('.carousel-inner').style.transform = newTransform;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Optional: Automatically move to the next slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
 </body>
 </html>

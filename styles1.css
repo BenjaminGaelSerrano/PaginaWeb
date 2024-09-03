@@ -1,5 +1,5 @@
 :root{
-    --colorcito:rgb(64, 192, 235);
+    --colorcito:rgb(149, 209, 243);
     --grisicito:rgb(230, 224, 224);
     --grisicito2:rgb(243, 235, 235);
 }
@@ -8,31 +8,40 @@
     padding: 0;
 }
 header{
+    
     background-color:var(--colorcito);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 30px;
 }
 #parte_de_arriba{
     display: flex;
     justify-content: space-between;
 }
+#polito{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    /*por ahora polito no esta vacio but keep being my favourtite penguin*/
+}
 #pepo{
     display: none;
 }
 #titlepr{
+    padding-top: 20px;
     font-family: fantasy;
     color: black;
-    margin-top: 35px;
-    
+    margin-top: 30px;    
 }
-#titlepr:hover{
-    color: yellow;
-}
-#polito{
-    display: flex;
-}
+
 #carrito{
+    padding-top: 20px;
     width: 3%;
     height: 100%;
-    margin-top: 45px;
+    margin-top: 40px;
     background-color:var(--colorcito) ;
     border: none;
 }
@@ -40,10 +49,11 @@ header{
     color: yellow;
 }
 #buscar{
+    padding-top: 20px;
     display: flex;
     height:50% ;
     position: relative;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 #login{
     height: 20%;
@@ -68,14 +78,23 @@ header{
     color: white;
 }
 #filtros{
-    display: flex;
+    
+    /*display: flex;*/
+    border-right: solid 1px var(--grisicito);
+    padding-right: 10px;
+
+    /*flex-direction: column;*/
 }
 #textofiltros{
     margin-top: 20px;
+    border-top :solid 1px var(--grisicito);
+
 }
-#filtros{
-    flex-direction: column;
+h3.textofiltros {
+    border-top: solid 1px var(--grisicito);
+    border-bottom: solid 1px var(--grisicito);
 }
+
 #color{
     width: 10%;
 }
@@ -94,14 +113,15 @@ label{
 label:hover{
     color: yellow;
 }
-#productos{
+.productos{
     display: flex;
-    margin: 20px;
+    margin: 15px;
     border:solid 0.2px;
     border-color: var(--grisicito);
     margin-bottom: 400px;
+    width: 15%;
 }
-#productos:hover{
+.productos:hover{
     background-color:var(--grisicito);
 }
 #pagina{
@@ -119,4 +139,62 @@ label:hover{
     font-weight:bolder;
     line-height: 120%;
 }
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajusta el tamaño máximo según tus necesidades */
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd; /* Optional: Adds a border around the carousel */
+    border-radius: 8px; /* Optional: Rounds the corners of the carousel */
+}
 
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    min-width: 20%; /* Mostrar 5 elementos a la vez */
+    box-sizing: border-box;
+    padding: 10px; /* Espacio entre los elementos */
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
