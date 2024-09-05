@@ -154,21 +154,22 @@
                 <div class="carousel-inner">
                     <!-- Agrupamos los productos en un solo item del carrusel -->
                     <div class="carousel-item">
-                        <div class="product"><img src="/imagenes/pelota.png" alt="Pelota de futbol Nike"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/PALO-DE-HOCKEY-NASSAU-HERO-BLANCO-26-removebg-preview.png" alt="Palo de Hockey Nassau"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/pumas1-2b6f0c51ef391eb1b216312059688938-640-0-removebg-preview.png" alt="Camiseta de los Pumas"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/gorra-de-lycra-sporto-3-removebg-preview.png" alt="Gorro de Natación Porto"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/270323-800-auto-removebg-preview.png" alt="Camiseta Alternativa River Plate 2023/24"><div class="carousel-caption"></div></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/pelota.png" alt="Pelota de futbol Nike"> <h3 class="producto_nombre">Pelota de futbol Nike</h3>
+                            <span class="producto_precio">$20.00</span></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/PALO-DE-HOCKEY-NASSAU-HERO-BLANCO-26-removebg-preview.png" alt="Palo de Hockey Nassau"> <h3 class="producto_nombre">Pelota de futbol Nike</h3>
+                            <span class="producto_precio">$20.00</span></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/pumas1-2b6f0c51ef391eb1b216312059688938-640-0-removebg-preview.png" alt="Camiseta de los Pumas"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/gorra-de-lycra-sporto-3-removebg-preview.png" alt="Gorro de Natación Porto"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/270323-800-auto-removebg-preview.png" alt="Camiseta Alternativa River Plate 2023/24"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/juego-de-b--dminton-con-red-paletas-y-plumas-raqueta__1_-removebg-preview.png" alt="Producto 6"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/86-camiseta-argentina-2023-12-08t124022-587-2c0f8e92707186527717126996085954-1024-1024-removebg-preview.png" alt="Producto 7"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/images__1_-removebg-preview.png" alt="Producto 8"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/620109-mla27871688688_072018-o-4d356801de6824b22515438375078421-640-0-removebg-preview.png" alt="Producto 9"></div>
+                        <div class="productos"><img class="producto_imagen" src="/imagenes/images__2_-removebg-preview.png" alt="Producto 10"></div>
                     </div>
                     <!-- Añadir más grupos de productos según sea necesario -->
-                    <!-- Ejemplo de otro grupo de productos -->
-                    <div class="carousel-item">
-                        <div class="product"><img src="/imagenes/juego-de-b--dminton-con-red-paletas-y-plumas-raqueta__1_-removebg-preview.png" alt="Producto 6"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/86-camiseta-argentina-2023-12-08t124022-587-2c0f8e92707186527717126996085954-1024-1024-removebg-preview.png" alt="Producto 7"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/images__1_-removebg-preview.png" alt="Producto 8"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/620109-mla27871688688_072018-o-4d356801de6824b22515438375078421-640-0-removebg-preview.png" alt="Producto 9"><div class="carousel-caption"></div></div>
-                        <div class="product"><img src="/imagenes/png-transparent-bicycle-saddles-selle-italia-cycling-bicycle-seat-bicycle-saddles-bicycle-racing-bicycle-black-thumbnail.png" alt="Producto 10"><div class="carousel-caption"></div></div>
-                    </div>
                 </div>
                 <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
                 <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
@@ -179,7 +180,7 @@
     </footer>
     <script>
         let currentIndex = 0;
-
+        const itemsToShow = 1; // Cambia esto a la cantidad de items que quieras mostrar en el carrusel
         function showSlide(index) {
             const slides = document.querySelectorAll('.carousel-item');
             if (index >= slides.length) {
@@ -192,15 +193,12 @@
             const newTransform = `translateX(-${currentIndex * 100}%)`;
             document.querySelector('.carousel-inner').style.transform = newTransform;
         }
-
         function nextSlide() {
-            showSlide(currentIndex + 1);
+            showSlide(currentIndex + itemsToShow);
         }
-
         function prevSlide() {
-            showSlide(currentIndex - 1);
+            showSlide(currentIndex - itemsToShow);
         }
-
         // Optional: Automatically move to the next slide every 5 seconds
         setInterval(nextSlide, 5000);
     </script>
