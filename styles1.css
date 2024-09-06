@@ -32,11 +32,10 @@ main{
 }
 #titlepr{
     padding-top: 20px;
-    font-family: fantasy;
+    font-family: "MoreEscudero";
     color: black;
-    margin-top: 30px;    
+    margin-top: 30px;   
 }
-
 #carrito{
     padding-top: 20px;
     width: 3%;
@@ -125,8 +124,8 @@ label:hover{
     display: flex;
 }
 .producto_imagen{
-    width: 290px;
-    height: 250px;
+    width: 220px;
+    height: 180px;
 }
 .producto_nombre{
     font-weight:lighter;
