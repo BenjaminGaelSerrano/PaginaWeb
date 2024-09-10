@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="fonts.css">
     <script src="https://kit.fontawesome.com/63b835f25a.js" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatibttfle" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>deporweb.desd.com.ar</title>
 </head>
@@ -19,12 +20,14 @@
                 <h1 id="titlepr">SI ES DEPORTIVO, ESTÁ ACÁ</h1>
             </div>
             <div id="buscar">
-                <input type="text" placeholder="Buscar...">
-                <button id="lupita"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div id="barritadecereal">
+                    <input type="text" placeholder="Buscar...">
+                    <button id="lupita">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
             <button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button>
             <div><button id="login"><p id="texto">Log-In</p></button></div>
-
         </div>
     </header>
     <!--trabajar en la parde del header alinearlo
@@ -154,26 +157,35 @@
                 <div class="carousel-inner">
                     <!-- Agrupamos los productos en un solo item del carrusel -->
                     <div class="carousel-item">
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/pelota.png" alt="Pelota de futbol Nike"> <h3 class="producto_nombre">Pelota de futbol Nike</h3>
-                            <span class="producto_precio">$20.00</span></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/PALO-DE-HOCKEY-NASSAU-HERO-BLANCO-26-removebg-preview.png" alt="Palo de Hockey Nassau"> <h3 class="producto_nombre">Pelota de futbol Nike</h3>
-                            <span class="producto_precio">$20.00</span></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/pumas1-2b6f0c51ef391eb1b216312059688938-640-0-removebg-preview.png" alt="Camiseta de los Pumas"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/gorra-de-lycra-sporto-3-removebg-preview.png" alt="Gorro de Natación Porto"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/270323-800-auto-removebg-preview.png" alt="Camiseta Alternativa River Plate 2023/24"></div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/juego-de-b--dminton-con-red-paletas-y-plumas-raqueta__1_-removebg-preview.png" alt="Producto 6"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/86-camiseta-argentina-2023-12-08t124022-587-2c0f8e92707186527717126996085954-1024-1024-removebg-preview.png" alt="Producto 7"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/images__1_-removebg-preview.png" alt="Producto 8"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/620109-mla27871688688_072018-o-4d356801de6824b22515438375078421-640-0-removebg-preview.png" alt="Producto 9"></div>
-                        <div class="productos"><img class="producto_imagen" src="/imagenes/images__2_-removebg-preview.png" alt="Producto 10"></div>
+                    <?php
+        $servername = "127.0.0.1";
+        $database = "Pagina_web";
+        $username = "alumno";
+        $password = "alumnoipm";
+//tetas de mW
+        $conexion = mysqli_connect($servername, $username, $password, $database);
+        if (!$conexion) {
+            die("Conexion fallida: " . mysqli_connect_error());
+        }
+        else{
+            $query = "select * from productos;";
+            $resultados=mysqli_query($conexion, $query);
+        }?>
+        
+            <!-- Agrupamos los productos en un solo item del carrusel -->
+        <?php
+        while($fila=mysqli_fetch_assoc($resultados)){?>
+            <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+            <span class="producto_precio"><?php echo $fila["precio"]?></span></article></div>
+    <?php    }
+    ?>
                     </div>
                     <!-- Añadir más grupos de productos según sea necesario -->
                 </div>
                 <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
                 <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
             </div>
+            
         </div>                           
     </main>
     <footer>
