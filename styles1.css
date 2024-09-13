@@ -8,6 +8,9 @@
     padding: 0;
     font-family: "MoreEscudero";
 }
+body{
+    font-family: "MoreEscudero";
+}
 header{    
     /* AAAAAAAAAAAAAAAA  */
     border-style: solid;
@@ -37,7 +40,7 @@ main{
     color: black;
 }
 #carrito{
-    background-color: transparent;
+    background-color: transpSI ES DEPORTIVO, ESTÁ ACÁarent;
     border: none;
 }
 #carrito img{
