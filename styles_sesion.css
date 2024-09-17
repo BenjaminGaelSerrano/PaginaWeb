@@ -6,9 +6,12 @@
     border-style: solid;
     border-width: 1px;
     border-color: #bbb8b8;
-    width: 25%;
+    width: 22%;
     text-align: center;
     box-shadow:0px 0px 20px #999 ;
+}
+*{
+    font-family: "MoreEscudero";
 }
 #divpadre{
     display: flex;
@@ -72,8 +75,12 @@
     
     justify-content: center;
 }
+#textoterminos{
+    font-size: 15px;
+}
 #preguntita{
     margin-top: 0px;
+    font-size: 15px;
 }
 #omgitsfooter{
     width: 100%;

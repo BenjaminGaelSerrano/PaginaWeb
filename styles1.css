@@ -1,14 +1,11 @@
 :root{
     --colorcito:rgb(149, 209, 243);
-    --grisicito:rgb(230, 224, 224);
-    --grisicito2:rgb(243, 235, 235);
+    --grisicito:rgb(235, 232, 232);
+    --grisicito2:rgb(250, 245, 245);
 }
 *{
     margin: 0;
     padding: 0;
-    font-family: "MoreEscudero";
-}
-body{
     font-family: "MoreEscudero";
 }
 header{    
@@ -27,36 +24,69 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--grisicito2);
+}
+#polito{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
 }
 #polito img{
     padding: 10px 0 0 10px;
     /*por ahora polito no esta vacio but keep being my favourtite penguin*/
 }
+#cositas_arribita{
+    list-style: none;
+    display: flex;
+}
+#cositas_arribita li{
+    margin: 0 10px;
+    
+
+}
 #pepo{
     display: none;
 }
-#titlepr{
-    font-family: "MoreEscudero";
-    color: black;
-}
 #carrito{
-    background-color: transpSI ES DEPORTIVO, ESTÁ ACÁarent;
+    background-color: transparent;
     border: none;
 }
 #carrito img{
-    width: 30px;
+    width: 25px;
     margin-right: 7px;
 }
 #carritoyusuario{
     display: flex;
     padding: 7px;
+    margin-right: 50px ;
 }
-#persona{
+#persona img{
+    
     border: none;
     background: none;
 }
+#desplegable{
+    display: none;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px #999 ;
+    padding: 4px;
+    position: absolute;
+    right: 6px;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid #bbb8b8;
+
+}
+#persona:hover #desplegable{
+    display: flex; 
+}
+#desplegable a:hover{
+    text-decoration: underline;
+}
 #persona img{
-    width: 30px;
+    width: 25px;
 }
 #buscar{
 display: flex;
@@ -76,7 +106,7 @@ align-items: center;
     border: none;
     border-radius: 5px;
     font-size: 0.9rem;
-    background-color: #fff;
+    background-color: var(--grisicito);
 }
 #barritadecereal button{
     border-radius: 5px;
@@ -123,14 +153,12 @@ h3.textofiltros {
     width: 10%;
 }
 .textofiltros{
-    font-family: fantasy;
-    font-size:larger;
+    
+    
 }
-.textofiltros:hover{
-    color: var(--colorcito);
-}
+
 label{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
     font-size: medium;
     color:grey;
 }
