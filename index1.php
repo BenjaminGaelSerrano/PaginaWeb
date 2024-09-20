@@ -50,123 +50,132 @@
             <div id="filtros">
                 <h2>FILTROS</h2><br>
                 <h3 class="textofiltros">DEPORTE</h3>
-                <div class="tiempo">
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Fútbol</label>
-                </div>
-                <div>   
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Basquet</label>
-                </div>
-                <div>   
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Hockey</label>
-                </div>
-                <div>   
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Volley</label>
-                </div>
-                <div>   
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Golf</label>
-                </div>
-                <div>   
-                    <input type="checkbox" class="deporte">
-                    <label for="deporte">Rugby</label>
+                <div class="alaizquierda">
+                    <div>
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Fútbol</label>
+                    </div>
+                    <div>   
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Basquet</label>
+                    </div>
+                    <div>   
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Hockey</label>
+                    </div>
+                    <div>   
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Volley</label>
+                    </div>
+                    <div>   
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Golf</label>
+                    </div>
+                    <div>   
+                        <input type="checkbox" class="deporte">
+                        <label for="deporte">Rugby</label>
+                    </div>
                 </div>
                 <h3 class="textofiltros">COLOR</h3>   
-                <div class="tiempo">    
-                    <input type="checkbox" class="color">
-                    <label for="color">Verde</label>
+                <div class="alaizquierda">
+                    <div>    
+                        <input type="checkbox" class="color">
+                        <label for="color">Verde</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Rojo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Amarillo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Violeta</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Naranja</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color"> Negro</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Blanco</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="color">
+                        <label for="color">Marron</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Rojo</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Amarillo</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Violeta</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Naranja</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color"> Negro</label>
-                </div>    
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Blanco</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="color">
-                    <label for="color">Marron</label>
-                </div>
-                <h3 class="textofiltros">MARCA</h3>   
-                <div class="tiempo">    
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Adidas</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Nike</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Under Armour</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Puma</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Jordan</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Topper</label>
-                </div>    
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">New Balance</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="marca">
-                    <label for="marca">Fila</label>
-                </div>
+                <h3 class="textofiltros">MARCA</h3>
+                <div class="alaizquierda">
+                    <div>    
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Adidas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Nike</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Under Armour</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Puma</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Jordan</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Topper</label>
+                    </div>    
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">New Balance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="marca">
+                        <label for="marca">Fila</label>
+                    </div>                
+                </div>   
                 <h3 class="textofiltros">GENERO</h3>   
-                <div class="tiempo">    
-                    <input type="checkbox" class="genero">
-                    <label for="genero">Femenino</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="genero">
-                    <label for="genero">Masculino</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="genero">
-                    <label for="genero">Ninguno</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="genero">
-                    <label for="genero">niño/a</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="genero">
-                    <label for="genero">bebe</label>
-                </div>
-                <div>
-                    <input type="checkbox" class="genero">
-                    <label for="genero">Unisex</label>
+                <div class="alaizquierda">
+                    <div>    
+                        <input type="checkbox" class="genero">
+                        <label for="genero">Femenino</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="genero">
+                        <label for="genero">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="genero">
+                        <label for="genero">Ninguno</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="genero">
+                        <label for="genero">niño/a</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="genero">
+                        <label for="genero">bebe</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="genero">
+                        <label for="genero">Unisex</label>
+                    </div>
                 </div>    
             </div>     
             <div class="carousel">
+                <h2 id="descuentos">DESCUENTOS</h2>
                 <div class="carousel-inner">
                     <!-- Agrupamos los productos en un solo item del carrusel -->
                     <div class="carousel-item">
@@ -175,7 +184,6 @@
         $database = "Pagina_web";
         $username = "alumno";
         $password = "alumnoipm";
-//tetas de mW
         $conexion = mysqli_connect($servername, $username, $password, $database);
         if (!$conexion) {
             die("Conexion fallida: " . mysqli_connect_error());
@@ -184,13 +192,17 @@
             $query = "select * from productos;";
             $resultados=mysqli_query($conexion, $query);
         }?>
-        
             <!-- Agrupamos los productos en un solo item del carrusel -->
         <?php
-        while($fila=mysqli_fetch_assoc($resultados)){?>
+        $contador=1;
+        while($fila=mysqli_fetch_assoc($resultados)){
+            if($contador%6==0){
+                ?></div><div class="carousel-item"><?php
+            }
+            ?>
             <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
-            <span class="producto_precio"><?php echo $fila["precio"]?></span></article></div>
-    <?php    }
+            <span class="producto_precio"><?php echo $fila["precio"]?>$</span></article></div>
+    <?php  $contador++;  }
     ?>
                     </div>
                     <!-- Añadir más grupos de productos según sea necesario -->
@@ -198,7 +210,6 @@
                 <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
                 <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
             </div>
-            
         </div>                           
     </main>
     <footer>
