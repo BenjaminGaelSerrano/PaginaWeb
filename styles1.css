@@ -1,7 +1,7 @@
 :root{
     --colorcito:rgb(149, 209, 243);
-    --grisicito:rgb(235, 232, 232);
-    --grisicito2:rgb(250, 245, 245);
+    --grisicito:rgb(220, 220, 220);
+    --grisicito2:rgb(255, 247, 247);
 }
 *{
     margin: 0;
@@ -33,7 +33,10 @@ main{
     margin-left: 50px;
 }
 #polito img{
-    padding: 10px 0 0 10px;
+    margin-left: 23px;
+    margin-top: 5px;
+    width: 80px;
+    height: 80px;
     /*por ahora polito no esta vacio but keep being my favourtite penguin*/
 }
 #cositas_arribita{
@@ -132,39 +135,42 @@ align-items: center;
     color: white;
 }
 #filtros{
-    
     /*display: flex;*/
-    border-right: solid 1px var(--grisicito);
-    padding-right: 10px;
-
+    border: solid 1px var(--grisicito);
+    /*background-color: var(--grisicito2);*/
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 180px;
+    height: 900px;
+    text-align: center;
+    background-color: var(--grisicito2);
     /*flex-direction: column;*/
+    box-shadow:0px 0px 10px var(--grisicito) ;
 }
-#textofiltros{
-    margin-top: 20px;
-    border-top :solid 1px var(--grisicito);
-
+h2{
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: "MoreEscudero";
+    border-bottom: 2px solid var(--grisicito2);
 }
 h3.textofiltros {
-    border-top: solid 1px var(--grisicito);
-    border-bottom: solid 1px var(--grisicito);
-}
+    font-size: 15px;
+    margin: 20px 0 20px 0 ;
+    border-top: 1px solid var(--grisicito);
+    border-bottom: 1px solid var(--grisicito);
 
+}
 #color{
     width: 10%;
 }
-.textofiltros{
-    
-    
-}
+
 
 label{
     
     font-size: medium;
     color:grey;
 }
-label:hover{
-    color: yellow;
-}
+
 .productos{
     display: flex;
     border:solid 0.2px;
@@ -181,12 +187,11 @@ label:hover{
     height: 180px;
 }
 .producto_nombre{
-    font-weight:lighter;
+    font-weight:bolder;
 }
 .producto_precio{
-    color:black;
-    font-weight:bolder;
-    line-height: 120%;
+    color:var black;
+    font-weight:lighter;
 }
 .carousel {
     position: relative;

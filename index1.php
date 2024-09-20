@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles1.css">
     <link rel="stylesheet" href="fonts.css">
     <script src="https://kit.fontawesome.com/63b835f25a.js" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatibttfle" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>deporweb.desd.com.ar</title>
 </head>
@@ -15,27 +15,42 @@
             
             <div id="polito">
                 <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
+                <div id="buscar">
+                    <div id="barritadecereal">
+                        <input type="text" placeholder="Buscar...">
+                        <button id="lupita">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
             </div>
-            <div id="lema">
-                <h1 id="titlepr">SI ES DEPORTIVO, ESTÁ ACÁ</h1>
+            <div id="cositas_arriba">
+                <ul id="cositas_arribita">
+                    <li>Inicio</li>
+                    <li>Productos</li>
+                    <li>Contacto</li>
+                </ul>
             </div>
-            <div id="buscar">
-                <input type="text" placeholder="Buscar...">
-                <button id="lupita"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div id="carritoyusuario">
+                <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+                <div id="persona">
+                    <img src="/imagenes/avatar.png" alt="persona">
+                    <ul id="desplegable">
+                        <li><a href="form_sesion.html">Iniciar Sesion</a></li>
+                        <li><a href="form.html">Registrarse</a></li>
+                    </ul>
+                </div>
+                
             </div>
-            <button id="carrito"><i class="fa-solid fa-cart-shopping"></i></button>
-            <div><button id="login"><p id="texto">Log-In</p></button></div>
-
         </div>
     </header>
     <!--trabajar en la parde del header alinearlo
-    mejorar la distribucion y las fuentes que son una garcha-->
+    mejorar la distribuciòn y las fuentes que son una garcha-->
     <main>
         <div id="pagina">
             <div id="filtros">
                 <h2>FILTROS</h2><br>
                 <h3 class="textofiltros">DEPORTE</h3>
-                <div>
+                <div class="tiempo">
                     <input type="checkbox" class="deporte">
                     <label for="deporte">Fútbol</label>
                 </div>
@@ -60,7 +75,7 @@
                     <label for="deporte">Rugby</label>
                 </div>
                 <h3 class="textofiltros">COLOR</h3>   
-                <div>    
+                <div class="tiempo">    
                     <input type="checkbox" class="color">
                     <label for="color">Verde</label>
                 </div>
@@ -93,7 +108,7 @@
                     <label for="color">Marron</label>
                 </div>
                 <h3 class="textofiltros">MARCA</h3>   
-                <div>    
+                <div class="tiempo">    
                     <input type="checkbox" class="marca">
                     <label for="marca">Adidas</label>
                 </div>
@@ -126,7 +141,7 @@
                     <label for="marca">Fila</label>
                 </div>
                 <h3 class="textofiltros">GENERO</h3>   
-                <div>    
+                <div class="tiempo">    
                     <input type="checkbox" class="genero">
                     <label for="genero">Femenino</label>
                 </div>
@@ -160,7 +175,7 @@
         $database = "Pagina_web";
         $username = "alumno";
         $password = "alumnoipm";
-
+//tetas de mW
         $conexion = mysqli_connect($servername, $username, $password, $database);
         if (!$conexion) {
             die("Conexion fallida: " . mysqli_connect_error());
