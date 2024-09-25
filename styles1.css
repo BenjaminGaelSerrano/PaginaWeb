@@ -255,3 +255,41 @@ label{
     border: 2px solid black;
     border-radius: 5px;
 }
+footer{
+    
+    width: 100%;
+    height: 180px;
+    border-top:solid 1px;
+    border-color: var(--grisicito);
+    background-color: var(--grisicito2);
+}
+#futigod{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.ayuda{
+    width: 25%;
+    height: 90%;
+    padding-left: 20px;
+    margin-top: 20px;
+
+}
+#lista-ayuda{
+    list-style: none;
+}
+
+#lista-acerca{
+    list-style: none;
+}
+.foto-suger{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#line-down{
+    padding-top: 5px;
+    display: flex;
+}
