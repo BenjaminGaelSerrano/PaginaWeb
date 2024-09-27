@@ -219,7 +219,7 @@ h3.textofiltros {
     display: flex;
     border:solid 0.2px;
     border-color: var(--grisicito);
-    margin-left: 15px;
+    margin-left: 18.5px;
 
 }
 .productos:hover{
@@ -234,8 +234,8 @@ h3.textofiltros {
 }
 .producto_nombre{
     font-family: "MoreEscudero";
-    font-weight:lighter;
-    color: var(--grisicito3);
+    font-weight: 900;
+    color:rgb(48, 48, 48);
 }
 .producto_precio{
     color:black;
@@ -271,20 +271,12 @@ h3.textofiltros {
 }
 
 .carousel-control {
-    position: absolute;
+    position:static;
     transform: translateY(50%);
     background-color: rgba(230, 227, 227, 0.7);
     border: none;
     cursor: pointer;
     width: 2%;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
 }
 footer{
     
@@ -324,4 +316,21 @@ footer{
     padding-top: 5px;
     display: flex;
     margin-left: 2vw;
+}
+#partecentraleizquierda{
+    display: flex;
+    flex-direction: column;
+}
+#descuento{
+    margin-left:450px;
+    padding-bottom: 20px;
+}
+#descuento h2{
+    border-color: white;
+}
+.carousel-controlnext{
+    right: 1px;
+}
+.carousel-controlprev{
+    left: 1px;
 }

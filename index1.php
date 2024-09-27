@@ -173,9 +173,13 @@
                         <label for="genero">Unisex</label>
                     </div>
                 </div>        
-            </div>     
+            </div>
             <div class="carousel">
-                <div class="carousel-inner">
+                <div id="partecentraleizquierda">    
+                    <div id="descuento">
+                        <h2>¡DESCUENTOS ESPECIALES!</h2>
+                    </div> 
+                    <div class="carousel-inner">
                     <!-- Agrupamos los productos en un solo item del carrusel -->
                     <div class="carousel-item">
                     <?php
@@ -200,18 +204,19 @@
             }
             ?>
             <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
-            <span class="producto_precio"><?php echo $fila["precio"]?>$</span></article></div>
+            <span class="producto_precio">$<?php echo $fila["precio"]?></span></article></div>
     <?php  $contador++;  }
     ?>
                     </div>
                     <!-- Añadir más grupos de productos según sea necesario -->
                 </div>
-                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
-                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                <button class="carousel-controlprev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-controlnext" onclick="nextSlide()">&#10095;</button>
             </div>
             
         </div>                           
     </main>
+            </div>
     <script>
     let currentIndex = 0;
         const itemsToShow = 1; // Cambia esto a la cantidad de items que quieras mostrar en el carrusel
