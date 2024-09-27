@@ -1,0 +1,311 @@
+:root{
+    --colorcito:rgb(149, 209, 243);
+    --grisicito:rgb(220, 220, 220);
+    --grisicito2:rgb(255, 247, 247);
+    --grisicito3:rgb(121, 120, 120);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "MoreEscudero";
+}
+header{    
+    /* AAAAAAAAAAAAAAAA  */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb8b8;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+#parte_de_arriba{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grisicito2);
+}
+#polito{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+#polito img{
+    margin-left: 36px;
+    margin-top: 5px;
+    width: 70px;
+    height: 80px;
+    /*por ahora polito no esta vacio but keep being my favourtite penguin*/
+}
+#cositas_arribita{
+    list-style: none;
+    display: flex;
+}
+#cositas_arribita li{
+    margin: 0 10px;
+    
+
+}
+#pepo{
+    display: none;
+}
+#carrito{
+    background-color: transparent;
+    border: none;
+}
+#carrito img{
+    width: 25px;
+    margin-right: 7px;
+}
+#carritoyusuario{
+    display: flex;
+    padding: 7px;
+    margin-right: 50px ;
+}
+#persona img{
+    
+    border: none;
+    background: none;
+}
+.desplegable{
+    display: none;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px #999 ;
+    padding: 4px;
+    position: absolute;
+    right: 6px;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid #bbb8b8;
+}
+.desplega-lis{
+    display: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px #999 ;
+    padding: 4px;
+    width: 50%;
+    right: 6px;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid #bbb8b8;
+}
+
+#persona:hover .desplegable{
+    display: flex; 
+}
+#conte-coct:hover .desplega-lis{
+    display: flex;
+}
+#desplegable a:hover{
+    text-decoration: underline;
+}
+#persona img{
+    width: 25px;
+}
+#buscar{
+display: flex;
+align-items: center;
+}
+#barritadecereal{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+}
+#barritadecereal input{
+    outline: none;
+    width: 100%;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 13px;
+    font-size: 0.9rem;
+    background-color: var(--grisicito);
+}
+#barritadecereal button{
+    border-radius: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#lupita{
+    display:flex;
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+    background: transparent;
+    border:none;
+    position: absolute;
+}
+#lupita:hover{
+    color: yellow;
+}
+#texto{
+    text-align:justify;
+    font-family: monospace;
+    color: white;
+}
+#filtros{
+    /*display: flex;*/
+    border: solid 1px var(--grisicito);
+    /*background-color: var(--grisicito2);*/
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 180px;
+    height: 900px;
+    text-align: center;
+    background-color: var(--grisicito2);
+    /*flex-direction: column;*/
+    box-shadow:0px 0px 10px var(--grisicito) ;
+}
+.alaizquierda{
+    text-align: left;
+    padding-left: 10px;
+}
+h2{
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: "MoreEscudero";
+    border-bottom: 2px solid var(--grisicito2);
+}
+h3.textofiltros {
+    font-size: 15px;
+    margin: 20px 0 20px 0 ;
+    border-top: 1px solid var(--grisicito);
+    border-bottom: 1px solid var(--grisicito);
+
+}
+#color{
+    width: 10%;
+}
+
+
+label{
+    
+    font-size: medium;
+    color:grey;
+}
+
+.productos{
+    display: flex;
+    border:solid 0.2px;
+    border-color: var(--grisicito);
+    margin: 10px;
+}
+.productos:hover{
+    background-color:var(--grisicito);
+}
+#pagina{
+    display: flex;
+}
+.producto_imagen{
+    width: 200px;
+    height: 180px;
+}
+.producto_nombre{
+    font-family: "MoreEscudero";
+    font-weight:lighter;
+    color: var(--grisicito3);
+}
+.producto_precio{
+    color:black;
+    font-weight:bolder;
+    text-align:justify;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.product {
+    flex: 1;
+    padding: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+#descuentos{
+    text-align: center;
+    font-size:40px;
+    background-color: rgb(255, 251, 15);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+footer{
+    
+    width: 100%;
+    height: 180px;
+    border-top:solid 1px;
+    border-color: var(--grisicito);
+    background-color: var(--grisicito2);
+}
+#futigod{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.ayuda{
+    width: 25%;
+    height: 90%;
+    padding-left: 20px;
+    margin-top: 15px;
+
+}
+#lista-ayuda{
+    list-style: none;
+}
+
+#lista-acerca{
+    list-style: none;
+}
+.foto-suger{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#line-down{
+    padding-top: 5px;
+    display: flex;
+    margin-left: 2vw;
+}
