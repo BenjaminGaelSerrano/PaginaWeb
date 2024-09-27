@@ -34,7 +34,7 @@
                 <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
                 <div id="persona">
                     <img src="/imagenes/avatar.png" alt="persona">
-                    <ul id="desplegable">
+                    <ul class="desplegable">
                         <li><a href="form_sesion.html">Iniciar Sesion</a></li>
                         <li><a href="form.html">Registrarse</a></li>
                     </ul>
@@ -201,8 +201,6 @@
             
         </div>                           
     </main>
-    <footer>
-    </footer>
     <script>
         let currentIndex = 0;
         const itemsToShow = 1; // Cambia esto a la cantidad de items que quieras mostrar en el carrusel
@@ -242,7 +240,12 @@
         <div class="ayuda">
             <h2>Acerca de nosotros</h2>
             <ul id="lista-acerca">
-                <li><a href="">Contactanos</a></li>
+                <div id="conte-coct">
+                    <li id="mov-kolu">Contactanos</li>
+                    <ul class="desplega-lis">
+                        <li>+54 9 11 2738 7367</li>
+                    </ul>
+                </div>
                 <li>nuestra historia</li>
             </ul>
         </div>
@@ -254,8 +257,7 @@
         <div class="ayuda">
             <h2>Politcas y privacidad</h2>
             <ul id="lista-acerca"></ul>
-                <li><a href="">Contactanos</a></li>
-                <li>nuestra historia</li>
+                
             </ul>
 
         </div>
@@ -264,8 +266,6 @@
         <div id="only-for">
             <p>Copyright © Instituto Politécnico Modelo</p>
         </div>
-            
-
     </div>
 </footer>
 </html>
