@@ -31,7 +31,7 @@ main{
     width: 40%;
     display: flex;
     justify-content: space-between;
-    margin-left: 50px;
+    margin-left: 73px;
 }
 #polito img{
     margin-left: 36px;
@@ -150,52 +150,77 @@ align-items: center;
     font-family: monospace;
     color: white;
 }
-#filtros{
-    /*display: flex;*/
+#filtros {
     border: solid 1px var(--grisicito);
-    /*background-color: var(--grisicito2);*/
     margin-right: 30px;
     margin-bottom: 10px;
-    width: 180px;
-    height: 900px;
+    width: 220px; /* Ampliado para mejorar el espacio */
+    height: auto; /* Cambiado a auto para ajustarse al contenido */
     text-align: center;
     background-color: var(--grisicito2);
-    /*flex-direction: column;*/
-    box-shadow:0px 0px 10px var(--grisicito) ;
+    box-shadow: 0px 0px 10px var(--grisicito);
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
 }
-.alaizquierda{
-    text-align: left;
-    padding-left: 10px;
-}
-h2{
+
+h2 {
     margin-top: 10px;
     font-size: 22px;
     font-family: "MoreEscudero";
-    border-bottom: 2px solid var(--grisicito2);
+    border-bottom: 2px solid var(--grisicito);
+    padding-bottom: 5px; /* Espaciado adicional */
 }
+
 h3.textofiltros {
-    font-size: 15px;
-    margin: 20px 0 20px 0 ;
+    font-size: 16px; /* Aumentado para mejor visibilidad */
+    margin: 20px 0 10px 0; /* Ajustado espaciado */
     border-top: 1px solid var(--grisicito);
     border-bottom: 1px solid var(--grisicito);
-
-}
-#color{
-    width: 10%;
+    padding: 5px 0; /* Espaciado adicional */
+    color: var(--grisicito3); /* Color de texto mejorado */
 }
 
+.filtrinios {
+    text-align: left;
+    padding-left: 10px;
+}
 
-label{
-    
-    font-size: medium;
-    color:grey;
+.filtrinios div {
+    margin: 10px 0; /* Espaciado entre opciones */
+}
+
+#filtros input[type="checkbox"] {
+    margin-right: 5px; /* Espaciado entre checkbox y etiqueta */
+}
+
+#filtros label {
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    color: grey;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+#filtros input[type="checkbox"]:hover + label {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+#filtros input[type="checkbox"]:checked + label {
+    font-weight: bold; /* Resaltar texto si está seleccionado */
+}
+
+/* Estilos para hacer que los filtros sean responsivos */
+@media (max-width: 768px) {
+    #filtros {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+    }
 }
 
 .productos{
     display: flex;
     border:solid 0.2px;
     border-color: var(--grisicito);
-    margin: 10px;
+    margin-left: 15px;
+
 }
 .productos:hover{
     background-color:var(--grisicito);
@@ -225,7 +250,7 @@ label{
 
 .carousel-inner {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
@@ -235,8 +260,9 @@ label{
 }
 
 .product {
-    flex: 1;
-    padding: 10px;
+    flex: 1 0 20%;
+    text-align: center;
+    margin: 10px;
 }
 
 .product img {
@@ -246,29 +272,19 @@ label{
 
 .carousel-control {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    transform: translateY(50%);
+    background-color: rgba(230, 227, 227, 0.7);
     border: none;
-    padding: 10px;
     cursor: pointer;
-    z-index: 10;
+    width: 2%;
 }
 
-.carousel-control.prev {
+.prev {
     left: 10px;
 }
 
-.carousel-control.next {
+.next {
     right: 10px;
-}
-#descuentos{
-    text-align: center;
-    font-size:40px;
-    background-color: rgb(255, 251, 15);
-    border: 2px solid black;
-    border-radius: 5px;
 }
 footer{
     
