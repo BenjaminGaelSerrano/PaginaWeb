@@ -191,126 +191,16 @@ footer{
     margin-left: 2vw;
 }
  
-#conte-pay{
-    display: flex;
-    border:solid 1px;
-    border-color: var(--grisicito);
-    width: 90vw;
-    height: 83vh;
-    background-color: var(--grisicito2);
-    box-shadow:0px 0px 10px #999 ;
-}
+
 ::-webkit-scrollbar{
     width: 5;
 }
-#col-fot{
-    border:solid 1px;
-    border-color: var(--grisicito);
-    height: 100%;
-    width: 10vw;
-}
-#conte-pay {
-    display: flex;
-    border: solid 1px var(--grisicito);
-    width: 90vw;
-    height: auto;
-    min-height: 80vh;
-    background-color: var(--grisicito2);
-    box-shadow: 0px 0px 10px #999;
-    padding: 20px;
-    gap: 20px;
-}
 
-#col-fot {
-    width: 15%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.thumbnail-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-.thumbnail {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-}
 
-.thumbnail:hover {
-    border-color: var(--colorcito);
-}
 
-#f-princi {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-#main-image {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-}
-
-#product-details {
-    width: 35%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#product-details h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #e53935;
-}
-
-.description {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #666;
-}
-
-.product-options {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.product-options select {
-    padding: 5px;
-    border: 1px solid var(--grisicito);
-    border-radius: 4px;
-}
-
-.add-to-cart {
-    padding: 10px 20px;
-    background-color: var(--colorcito);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-    background-color: #0056b3;
-}
 
 /*//////*/
 
@@ -333,6 +223,9 @@ footer{
     flex-direction: column;
     gap: 10px;
     overflow-y: auto; /* Permite desplazamiento si hay más de 4 miniaturas */
+}
+#col-fot ::-webkit-scrollbar{
+    width: 0px;
 }
 
 .thumbnail-container {
