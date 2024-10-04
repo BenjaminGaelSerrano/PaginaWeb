@@ -193,7 +193,7 @@
             die("Conexion fallida: " . mysqli_connect_error());
         }
         else{
-            $query = "select * from productos;";
+            $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=productos_id;";
             $resultados=mysqli_query($conexion, $query);
         }?>
         <?php
@@ -204,9 +204,9 @@
             }
             ?>
             <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
-            <span class="producto_precio">$<?php echo $fila["precio"]?></span></article></div>
+            <div class="pr"><?php if($fila["monto_des"]!=null){?><span class="producto_nuevo_precio">$<?php echo $fila["precio"]?>                        </span><span class="nuevo_precio">$<?php echo (int) $fila["precio_nuevo"]?></span><?php }else{?><span class="producto_precio">$<?php echo $fila["precio"]?></span><?php } ?></article></div>
     <?php  $contador++;  }
-    ?>
+    ?> </div>
                     </div>
                     <!-- Añadir más grupos de productos según sea necesario -->
                 </div>

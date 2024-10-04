@@ -234,13 +234,8 @@ h3.textofiltros {
 }
 .producto_nombre{
     font-family: "MoreEscudero";
-    font-weight: 900;
-    color:rgb(48, 48, 48);
-}
-.producto_precio{
-    color:black;
-    font-weight:bolder;
-    text-align:justify;
+    font-weight: 100;
+    color:rgb(49, 49, 49);
 }
 .carousel {
     position: relative;
@@ -298,6 +293,19 @@ footer{
     padding-left: 20px;
     margin-top: 15px;
 
+}
+.pr{
+    display: flex;
+}
+.producto_nuevo_precio {
+    color: var(--grisicito3); /* Gris claro */
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.nuevo_precio {
+    color: black;
+    font-weight: bold;
 }
 #lista-ayuda{
     list-style: none;
