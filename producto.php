@@ -26,7 +26,7 @@
             </div>
             <div id="cositas_arriba">
                 <ul id="cositas_arribita">
-                    <li>Inicio</li>
+                    <li> <a class="unline-cla" href="http://localhost/PaginaWeb/index1.php">Inicio</a></li>
                     <li>Productos</li>
                     <li>Contacto</li>
                 </ul>
@@ -40,7 +40,6 @@
                         <li><a href="form.html">Registrarse</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </header>

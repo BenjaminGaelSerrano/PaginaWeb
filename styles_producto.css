@@ -16,6 +16,7 @@ header{
     border-color: #bbb8b8;
     font-family: "MoreEscudero";
 }
+
 main{
     display: flex;
     margin-left: 40px;
@@ -329,4 +330,8 @@ footer{
         width: 100%;
         height: auto;
     }
+}
+.unline-cla{
+    text-decoration: none;
+    color: #000;
 }
