@@ -13,9 +13,9 @@
 <body>
     <header><!--eh ato q onda -->
         <div id="parte_de_arriba">
-           
+
             <div id="polito">
-                <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
+                <img src="/PaginaWeb/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
                     <div id="barritadecereal">
                         <input type="text" placeholder="Buscar...">
@@ -32,9 +32,9 @@
                 </ul>
             </div>
             <div id="carritoyusuario">
-                <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+                <button id="carrito"><img src="/PaginaWeb/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
                 <div id="persona">
-                    <img src="/imagenes/avatar.png" alt="persona">
+                    <img src="/PaginaWeb/imagenes/avatar.png" alt="persona">
                     <ul class="desplegable">
                         <li><a href="form_sesion.html">Iniciar Sesion</a></li>
                         <li><a href="form.html">Registrarse</a></li>
