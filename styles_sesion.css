@@ -1,161 +1,212 @@
 :root{
-    --colorcito:rgb(149, 209, 243);
-    --grisicito:rgb(220, 220, 220);
-    --grisicito2:rgb(255, 247, 247);
-    --grisicito3:rgb(121, 120, 120);
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "MoreEscudero";
-}
-#log-in{
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    padding: 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #bbb8b8;
-    width: 22%;
-    text-align: center;
-    box-shadow:0px 0px 20px #999 ;
+    --colorcito: rgb(149, 209, 243);
+    --grisicito: rgb(220, 220, 220);
+    --grisicito2: rgb(255, 247, 247);
+    --grisicito3: rgb(121, 120, 120);
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --background-color: #ecf0f1;
 }
 
-#divpadre{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "MoreEscudero", Arial, sans-serif;
+    box-sizing: border-box;
 }
-.garnacho{
-    padding: 6px 8px;
-    margin-top: 15px;
+
+html, body {
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#log-in {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+}
+
+#divpadre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.garnacho {
+    padding: 12px;
+    margin-top: 20px;
     width: 100%;
     box-sizing: border-box;
     transition: 0.3s;
     border: 1px solid #ccc;
-    outline: none; 
+    border-radius: 5px;
+    font-size: 16px;
+}
 
+.garnacho:hover, .garnacho:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
 }
-.garnacho:hover{
-    border: 1px solid #fff;
-    box-shadow: 0 0 20px #bbb;
-}
-#inicio{
-    margin-left: 16px;
-}
-#titulin{
+
+#titulin {
     display: flex;
     justify-content: center;
-/* tettataasss */
+    margin-bottom: 30px;
 }
-#fotito{
-        height: 100px;
-        width: 100px;
-}
-#register{
 
-    font-family: "MoreEscudero";
-    text-align: center;
+#fotito {
+    height: 120px;
+    width: auto;
+    max-width: 100%;
 }
-#enviarbro{
-    font-family: "MoreEscudero";
+
+#register {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#enviarbro {
+    font-family: "MoreEscudero", Arial, sans-serif;
     width: 100%;
-    margin-top: 15px;
-    background-color: aqua;
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    color: white;
     border: none;
-    padding: 6px;
+    padding: 12px;
     border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
     transition: 0.3s;
 }
-#enviarbro:hover{
-    background-color: rgb(0, 183, 255);
-}
-#enviarbro:active{
-    transform: scale(0.95);
-}
-#terminoscondiciones{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#eldegui{
-    display: flex;
-    
-    justify-content: center;
-}
-#textoterminos{
-    font-size: 15px;
-}
-#preguntita{
-    margin-top: 0px;
-    font-size: 15px;
-}
-#omgitsfooter{
-    width: 100%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #bbb8b8;
-    background: linear-gradient(rgb(93, 93, 94), rgb(255, 255, 255));
 
+#enviarbro:hover {
+    background-color: var(--secondary-color);
 }
-footer{
+
+#enviarbro:active {
+    transform: scale(0.98);
+}
+
+#yatenescuenta {
     margin-top: 20px;
-    width: 100%;
-    height: 30%;
-    border-top:solid 1px;
-    border-color: var(--grisicito);
-    background-color: var(--grisicito2);
-}
-#futigod{
-    display: flex;
-    width: 100%;
-    height: 80%;
-}
-
-.ayuda{
-    width: 25%;
-    height: 90%;
-    padding-left: 20px;
-    margin-top: 15px;
-
-}
-#lista-ayuda{
-    margin-top: 7px;
-    list-style: none;
-}
-
-#lista-acerca{
-    list-style: none;
-    margin-top: 7px;
-}
-
-.desplega-lis{
-    display: none;
     font-size: 16px;
-    background-color: #fff;
-    box-shadow:0px 0px 20px #999 ;
-    padding: 4px;
-    width: 50%;
-    right: 6px;
-    flex-direction: column;
-    list-style: none;
-    border: 1px solid #bbb8b8;
-    margin-top: 2px;
 }
-#conte-coct:hover .desplega-lis{
+
+#yatenescuenta a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#yatenescuenta a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 30px 0;
+}
+
+#futigod {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-#line-down{
-    margin-top: 20px;
-    margin-left: 20px;
 
+.ayuda {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 20px;
 }
-.li-sheiju{
 
-    margin-top: 2px;
+.ayuda h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--colorcito);
 }
-#on-image{
 
-    margin-top: 7px;
+#lista-ayuda, #lista-acerca {
+    list-style: none;
+}
+
+#lista-ayuda li, #lista-acerca li {
+    margin-bottom: 8px;
+}
+
+#on-image {
+    display: flex;
+    gap: 10px;
+}
+
+.foto-suger {
+    width: 30px;
+    height: 30px;
+}
+
+#line-down {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+
+@media screen and (max-width: 768px) {
+    #log-in {
+        width: 90%;
+    }
+    
+    .ayuda {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #log-in {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .ayuda {
+        width: 100%;
+    }
+    
+    #futigod {
+        flex-direction: column;
+    }
+    
+    #fotito {
+        height: 100px;
+    }
+    
+    #register {
+        font-size: 20px;
+    }
 }
