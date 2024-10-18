@@ -20,6 +20,7 @@ html, body {
     background-color: var(--background-color);
 }
 
+
 body {
     display: flex;
     flex-direction: column;
@@ -73,6 +74,7 @@ main {
 #titulin {
     display: flex;
     justify-content: center;
+    padding-top: 7px;
     margin-bottom: 30px;
 }
 

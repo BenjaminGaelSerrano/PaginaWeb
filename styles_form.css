@@ -25,6 +25,7 @@ body {
     flex-direction: column;
 }
 
+
 main {
     flex: 1;
     display: flex;
@@ -72,6 +73,7 @@ main {
 #titulin {
     display: flex;
     justify-content: center;
+    padding-top: 7px;
     margin-bottom: 30px;
 }
 

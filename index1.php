@@ -174,70 +174,124 @@
                     </div>
                 </div>        
             </div>
-            <div class="carousel">
-                <div id="partecentraleizquierda">    
-                    <div id="descuento">
-                        <h2>¡DESCUENTOS ESPECIALES!</h2>
-                    </div> 
-                    <div class="carousel-inner">
-                    <!-- Agrupamos los productos en un solo item del carrusel -->
-                    <div class="carousel-item">
-                    <?php
-        $servername = "127.0.0.1";
-        $database = "Pagina_web";
-        $username = "alumno";
-        $password = "alumnoipm";
-//tetas de mW
-        $conexion = mysqli_connect($servername, $username, $password, $database);
-        if (!$conexion) {
-            die("Conexion fallida: " . mysqli_connect_error());
-        }
-        else{
-            $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=productos_id;";
-            $resultados=mysqli_query($conexion, $query);
-        }?>
-        <?php
-        $contador=1;
-        while($fila=mysqli_fetch_assoc($resultados)){
-            if($contador%5==0){
-                ?></div><div class="carousel-item"><?php
+            <div id="carruseles">    
+                <div class="carousel">
+                    <div id="partecentraleizquierda">    
+                        <div id="descuento">
+                            <h2>¡DESCUENTOS ESPECIALES!</h2>
+                        </div> 
+                        <div class="carousel-inner">
+                        <!-- Agrupamos los productos en un solo item del carrusel -->
+                        <div class="carousel-item">
+                        <?php
+            $servername = "127.0.0.1";
+            $database = "Pagina_web";
+            $username = "alumno";
+            $password = "alumnoipm";
+            $conexion = mysqli_connect($servername, $username, $password, $database);
+            if (!$conexion) {
+                die("Conexion fallida: " . mysqli_connect_error());
             }
-            ?>
-            <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
-            <div class="pr"><?php if($fila["monto_des"]!=null){?><span class="producto_nuevo_precio">$<?php echo $fila["precio"]?>                        </span><span class="nuevo_precio">$<?php echo (int) $fila["precio_nuevo"]?></span><?php }else{?><span class="producto_precio">$<?php echo $fila["precio"]?></span><?php } ?></article></div>
-    <?php  $contador++;  }
-    ?> </div>
+            else{
+                $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=productos_id;";
+                $resultados=mysqli_query($conexion, $query);
+            }?>
+            <?php
+            $contador=1;
+            while($fila=mysqli_fetch_assoc($resultados)){
+                if($contador%5==0){
+                    ?></div><div class="carousel-item"><?php
+                }
+                ?>
+                <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+                <div class="pr"><?php if($fila["monto_des"]!=null){?><span class="producto_nuevo_precio">$<?php echo $fila["precio"]?>                        </span><span class="nuevo_precio">$<?php echo (int) $fila["precio_nuevo"]?></span><?php }else{?><span class="producto_precio">$<?php echo $fila["precio"]?></span><?php } ?></article></div>
+        <?php  $contador++;  }
+        ?> </div>
+                        </div>
+                        <!-- Añadir más grupos de productos según sea necesario -->
                     </div>
-                    <!-- Añadir más grupos de productos según sea necesario -->
+                    <button class="carousel-controlprev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-controlnext" onclick="nextSlide()">&#10095;</button>
                 </div>
-                <button class="carousel-controlprev" onclick="prevSlide()">&#10094;</button>
-                <button class="carousel-controlnext" onclick="nextSlide()">&#10095;</button>
-            </div>
-            
+                <!-- New carousel for bestsellers -->
+                <div class="carousel">
+                    <div id="partecentraleizquierda">    
+                        <div id="mas-vendidos">
+                            <h2>MÁS VENDIDOS</h2>
+                        </div> 
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <?php
+                                $servername = "127.0.0.1";
+                                $database = "Pagina_web";
+                                $username = "alumno";
+                                $password = "alumnoipm";
+                                $conexion = mysqli_connect($servername, $username, $password, $database);
+                                if (!$conexion) {
+                                    die("Conexion fallida: " . mysqli_connect_error());
+                                }
+                                else{
+                                    $query = "SELECT * FROM productos ORDER BY ventas DESC LIMIT 15;"; // Asumiendo que tienes una columna 'ventas'
+                                    $resultados = mysqli_query($conexion, $query);
+                                }
+                                $contador = 1;
+                                while($fila = mysqli_fetch_assoc($resultados)){
+                                    if($contador % 5 == 0){
+                                        ?></div><div class="carousel-item"><?php
+                                    }
+                                    ?>
+                                    <div class="productos">
+                                        <article class="producto_data">
+                                            <img class="producto_imagen" src="<?php echo $fila["imagen"]?>" alt="<?php echo $fila["descripcion"]?>">
+                                            <h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+                                            <span class="producto_precio">$<?php echo $fila["precio"]?></span>
+                                        </article>
+                                    </div>
+                                <?php
+                                    $contador++;
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-controlprev" onclick="prevSlideBestsellers()">&#10094;</button>
+                    <button class="carousel-controlnext" onclick="nextSlideBestsellers()">&#10095;</button>
+                </div>
+            </div>    
         </div>                           
     </main>
-            </div>
     <script>
     let currentIndex = 0;
-        const itemsToShow = 1; // Cambia esto a la cantidad de items que quieras mostrar en el carrusel
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-item');
-            if (index >= slides.length) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = slides.length - 1;
-            } else {
-                currentIndex = index;
-            }
-            const newTransform = `translateX(-${currentIndex * 100}%)`;
-            document.querySelector('.carousel-inner').style.transform = newTransform;
+    let currentIndexBestsellers = 0;
+    const itemsToShow = 1;
+
+    function showSlide(index, carouselClass) {
+        const slides = document.querySelectorAll(`${carouselClass} .carousel-item`);
+        if (index >= slides.length) {
+            index = 0;
+        } else if (index < 0) {
+            index = slides.length - 1;
         }
-        function nextSlide() {
-            showSlide(currentIndex + itemsToShow);
-        }
-        function prevSlide() {
-            showSlide(currentIndex - itemsToShow);
-        }
+        const newTransform = `translateX(-${index * 100}%)`;
+        document.querySelector(`${carouselClass} .carousel-inner`).style.transform = newTransform;
+        return index;
+    }
+
+    function nextSlide() {
+        currentIndex = showSlide(currentIndex + itemsToShow, '.carousel:not(.bestsellers-carousel)');
+    }
+
+    function prevSlide() {
+        currentIndex = showSlide(currentIndex - itemsToShow, '.carousel:not(.bestsellers-carousel)');
+    }
+
+    function nextSlideBestsellers() {
+        currentIndexBestsellers = showSlide(currentIndexBestsellers + itemsToShow, '.bestsellers-carousel');
+    }
+
+    function prevSlideBestsellers() {
+        currentIndexBestsellers = showSlide(currentIndexBestsellers - itemsToShow, '.bestsellers-carousel');
+    }
     </script>
 </body>
 <footer>
@@ -280,6 +334,3 @@
         <div id="only-for">
             <p>Copyright © Instituto Politécnico Modelo</p>
         </div>
-    </div>
-</footer>
-</html>

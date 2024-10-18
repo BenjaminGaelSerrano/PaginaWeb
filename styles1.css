@@ -25,7 +25,7 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--grisicito2);
+    background-color: #34495e;
 }
 #polito{
     width: 40%;
@@ -43,6 +43,7 @@ main{
 #cositas_arribita{
     list-style: none;
     display: flex;
+    color: lightblue;
 }
 #cositas_arribita li{
     margin: 0 10px;
@@ -291,7 +292,8 @@ footer{
     width: 25%;
     height: 90%;
     padding-left: 20px;
-    margin-top: 15px;
+    margin-top: 15px;    display: block;
+
 
 }
 .pr{
@@ -341,4 +343,106 @@ footer{
 }
 .carousel-controlprev{
     left: 1px;
+}
+/* Estilos generales para el carrusel */
+.carousel {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Borde ligero alrededor del carrusel */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Contenedor interno del carrusel */
+.carousel-inner {
+    display: flex;
+    display: block;
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+/* Elementos individuales del carrusel */
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa el ancho completo */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Cada item ocupa el ancho completo */
+}
+
+/* Estilos para los productos dentro del carrusel */
+.productos {
+    background-color: #fff; /* Fondo blanco para cada producto */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    transition: transform 0.2s; /* Efecto de transformación */
+    margin: 10px 0; /* Espaciado entre productos */
+}
+
+.productos:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Imagen del producto */
+.producto_imagen {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-bottom: 1px solid #ddd; /* Línea inferior para separación */
+}
+
+/* Nombre del producto */
+.producto_nombre {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar texto */
+}
+
+/* Precios */
+.producto_precio,
+.nuevo_precio {
+    display: block; /* Cada precio en su propia línea */
+    text-align: center; /* Centrar texto */
+}
+
+.producto_precio {
+    text-decoration: line-through; /* Tachar el precio original */
+    color: #999; /* Color gris */
+}
+
+.nuevo_precio {
+    color: #e74c3c; /* Color rojo para el nuevo precio */
+    font-weight: bold; /* Negrita para destacar */
+}
+
+/* Botones de control */
+.carousel-controlprev,
+.carousel-controlnext {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar la posición */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado */
+    border-radius: 50%; /* Botones redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    z-index: 1; /* Asegurar que estén por encima de otros elementos */
+}
+
+.carousel-controlprev {
+    left: 10px; /* Desplazar a la izquierda */
+}
+
+.carousel-controlnext {
+    right: 10px; /* Desplazar a la derecha */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .productos {
+        margin: 10px; /* Espaciado entre productos en móviles */
+    }
+
+    .producto_nombre {
+        font-size: 1em; /* Tamaño de fuente más pequeño en móviles */
+    }
 }
