@@ -14,7 +14,7 @@
         <div id="parte_de_arriba">
             
             <div id="polito">
-                <img src="/PaginaWeb/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
+                <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
                     <div id="barritadecereal">
                         <input type="text" placeholder="Buscar...">
@@ -55,7 +55,7 @@
                         <input type="checkbox" class="deporte">
                         <label for="deporte">Fútbol</label>
                     </div>
-                    <div>   
+                    <div>
                         <input type="checkbox" class="deporte">
                         <label for="deporte">Basquet</label>
                     </div>
@@ -186,14 +186,14 @@
                         <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "root";
-            $password = "";
+            $username = "alumno";
+            $password = "alumnoipm";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
             }
             else{
-                $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=producto_id;";
+                $query = "select *, ID_producto, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on productos.id_descuento=ofertas.id_descuento;";
                 $resultados=mysqli_query($conexion, $query);
             }?>
             <?php
@@ -203,7 +203,7 @@
                     ?></div><div class="carousel-item"><?php
                 }
                 ?>
-                <div class="productos"><article class="producto_data"><img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+                <div class="productos"><article class="producto_data"> <a href="http://localhost/producto.html"> <img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
                 <div class="pr"><?php if($fila["monto_des"]!=null){?><span class="producto_nuevo_precio">$<?php echo $fila["precio"]?>                        </span><span class="nuevo_precio">$<?php echo (int) $fila["precio_nuevo"]?></span><?php }else{?><span class="producto_precio">$<?php echo $fila["precio"]?></span><?php } ?></article></div>
         <?php  $contador++;  }
         ?> </div>
@@ -217,7 +217,7 @@
                 <div class="carousel">
                     <div id="partecentraleizquierda">    
                         <div id="mas-vendidos">
-                            <h2>MÁS VENDIDOS</h2>
+                            <h2>¡MÁS VENDIDOS!</h2>
                         </div> 
                         <div class="carousel-inner">
                             <div class="carousel-item">
@@ -231,7 +231,7 @@
                                     die("Conexion fallida: " . mysqli_connect_error());
                                 }
                                 else{
-                                    $query = "SELECT * FROM productos ORDER BY ventas DESC LIMIT 15;"; // Asumiendo que tienes una columna 'ventas'
+                                    $query = "SELECT * FROM productos join compra on ID_producto=Id_producto_producto  ORDER BY (select count(ID_producto_producto) from compra) DESC LIMIT 15;"; // Asumiendo que tienes una columna 'ventas'
                                     $resultados = mysqli_query($conexion, $query);
                                 }
                                 $contador = 1;
