@@ -186,14 +186,14 @@
                         <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "alumno";
-            $password = "alumnoipm";
+            $username = "root";
+            $password = "";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
             }
             else{
-                $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=productos_id;";
+                $query = "select *, monto_des, precio-(precio*monto_des)/100 as precio_nuevo from productos join ofertas on ID_producto=producto_id;";
                 $resultados=mysqli_query($conexion, $query);
             }?>
             <?php
