@@ -186,8 +186,8 @@
                         <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "alumno";
-            $password = "alumnoipm";
+            $username = "root";
+            $password = "";//se cambia el username entre notebook de san y compu del el cole
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
@@ -203,7 +203,7 @@
                     ?></div><div class="carousel-item"><?php
                 }
                 ?>
-                <div class="productos"><article class="producto_data"> <a href="http://localhost/producto.html"> <img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+                <div class="productos"><article class="producto_data"> <a href="http://localhost/paginawe/Paginaweb/producto.php"> <img class="producto_imagen" src=<?php echo $fila["imagen"]?> alt="Pelota de futbol Nike"><h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
                 <div class="pr"><?php if($fila["monto_des"]!=null){?><span class="producto_nuevo_precio">$<?php echo $fila["precio"]?>                        </span><span class="nuevo_precio">$<?php echo (int) $fila["precio_nuevo"]?></span><?php }else{?><span class="producto_precio">$<?php echo $fila["precio"]?></span><?php } ?></article></div>
         <?php  $contador++;  }
         ?> </div>
@@ -260,6 +260,50 @@
             </div>    
         </div>                           
     </main>
+    <footer>
+        <div id="futigod">
+            <div class="ayuda">
+                <h2>Ayuda</h2>
+                <ul id="lista-ayuda">
+                    <li class="li-sheiju">carlos</li>
+                    <li class="li-sheiju">te pusiste nerviosa?</li>
+                    <li class="li-sheiju">cavani</li>
+                    <li class="li-sheiju">gabibol</li>
+                </ul>
+            </div>
+            <div class="ayuda">
+                <h2>Acerca de nosotros</h2>
+                <ul id="lista-acerca">
+                    <div id="conte-coct">
+                        <li id="mov-kolu">Contactanos</li>
+                        <ul class="desplega-lis">
+                            <li>+54 9 11 2738 7367</li>
+                        </ul>
+                    </div>
+                    <li>nuestra historia</li>
+                </ul>
+            </div>
+            <div class="ayuda">
+                <h2>Seguinos</h2>
+                <div id="on-image">
+                    <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
+                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
+                </div>
+            </div>
+            <div class="ayuda">
+                <h2>Politcas y privacidad</h2>
+                <ul id="lista-acerca"></ul>
+                    <!--si abro un li acordate de poner esta class="li-sheiju"-->
+                </ul>
+    
+            </div>
+        </div>
+        <div id="line-down">
+            <div id="only-for">
+                <p>Copyright © Instituto Politécnico Modelo</p>
+            </div>
+        </div>
+    </footer>
     <script>
     let currentIndex = 0;
     let currentIndexBestsellers = 0;
@@ -294,43 +338,5 @@
     }
     </script>
 </body>
-<footer>
-    <div id="futigod">
-        <div class="ayuda">
-            <h2>Ayuda</h2>
-            <ul id="lista-ayuda">
-                <li>carlos</li>
-                <li>te pusiste nerviosa?</li>
-                <li>cavani</li>
-                <li>gabibol</li>
-            </ul>
-        </div>
-        <div class="ayuda">
-            <h2>Acerca de nosotros</h2>
-            <ul id="lista-acerca">
-                <div id="conte-coct">
-                    <li id="mov-kolu">Contactanos</li>
-                    <ul class="desplega-lis">
-                        <li>+54 9 11 2738 7367</li>
-                    </ul>
-                </div>
-                <li>nuestra historia</li>
-            </ul>
-        </div>
-        <div class="ayuda">
-            <h2>Seguinos</h2>
-            <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
-            <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
-        </div>
-        <div class="ayuda">
-            <h2>Politcas y privacidad</h2>
-            <ul id="lista-acerca"></ul>
-                
-            </ul>
-
-        </div>
-    </div>
-    <div id="line-down">
-        <div id="only-for">
-            <p>Copyright © Instituto Politécnico Modelo</p>
-        </div>
+</html>
+    
