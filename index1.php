@@ -269,7 +269,7 @@
                                     ?>
                                     <div class="productos">
                                         <article class="producto_data">
-                                            <a href="http://localhost/producto.php?id=<?php echo $fila['ID_producto']; ?>">
+                                            <a href="producto.php?id=<?php echo $fila['ID_producto']; ?>">
                                             <img class="producto_imagen" src="<?php echo $fila["imagen"]?>" alt="<?php echo $fila["descripcion"]?>">
                                             <h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
                                             <span class="producto_precio">$<?php echo $fila["precio"]?></span>
