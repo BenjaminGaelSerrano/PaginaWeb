@@ -385,7 +385,10 @@ footer{
 .productos:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
 }
-
+.producto_data a {
+    text-decoration: none !important; /* Elimina el subrayado */
+    color: inherit !important; /* Hereda el color del texto del contenedor */
+}
 /* Imagen del producto */
 .producto_imagen {
     width: 200px;
@@ -446,3 +449,11 @@ footer{
         font-size: 1em; /* Tamaño de fuente más pequeño en móviles */
     }
 }
+#cositas_arribita button{
+    background-color: transparent;
+    border: none;
+    color: lightblue;
+    list-style: none;
+    font-size: medium;
+}
+

@@ -49,8 +49,8 @@
             <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "root";
-            $password = "";
+            $username = "alumno";
+            $password = "alumnoipm";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
