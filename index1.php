@@ -38,9 +38,9 @@
 </div>
 
             <div id="carritoyusuario">
-                <button id="carrito"><img src="/PaginaWeb/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+                <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
                 <div id="persona">
-                    <img src="/PaginaWeb/imagenes/avatar.png" alt="persona">
+                    <img src="/imagenes/avatar.png" alt="persona">
                     <ul class="desplegable">
                         <li><a href="form_sesion.html">Iniciar Sesion</a></li>
                         <li><a href="form.html">Registrarse</a></li>
@@ -317,8 +317,8 @@
             <div class="ayuda">
                 <h2>Seguinos</h2>
                 <div id="on-image">
-                    <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
-                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
+                    <a href=""><img class="foto-suger" src="/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
+                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/imagenes/twitter-logo-1.png" alt="twitter"></a>
                 </div>
             </div>
             <div class="ayuda">
