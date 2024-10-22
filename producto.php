@@ -71,7 +71,10 @@
             ?>
                 <div class="thumbnail-container">
                     <!-- Aquí puedes agregar las miniaturas si tienes imágenes adicionales -->
-                    <img src="/PaginaWeb/imagenes/<?php echo $producto['imagen']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min1']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min2']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min3']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min4']; ?>" alt="Miniatura" class="thumbnail">                
                 </div>
             </div>
             <div id="f-princi">
@@ -80,7 +83,7 @@
             <div id="product-details">
                 <h1><?php echo $producto['descripcion']; ?></h1>
                 <p class="price">$<?php echo $producto['precio']; ?></p>
-                <p class="description"><?php echo $producto['detalle']; ?></p>
+                <p class="description"><?php echo $producto['marca']; ?></p>
                 <div class="product-options">
                     <label for="size">Talla:</label>
                     <select id="size">
