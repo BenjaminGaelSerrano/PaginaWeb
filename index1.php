@@ -54,6 +54,7 @@
     mejorar la distribuciòn y las fuentes que son una garcha-->
     <main>
         <div id="pagina">
+        <form method="GET" action="http://localhost/producto.php">
             <div id="filtros">
                 <h2>FILTROS</h2><br>
                 <h3 class="textofiltros">DEPORTE</h3>
@@ -181,6 +182,7 @@
                     </div>
                 </div>        
             </div>
+            </form>
             <div id="carruseles">    
                 <div class="carousel">
                     <div id="partecentraleizquierda">    
