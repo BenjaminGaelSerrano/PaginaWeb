@@ -1,0 +1,466 @@
+:root{
+    --colorcito:rgb(149, 209, 243);
+    --grisicito:rgb(220, 220, 220);
+    --grisicito2:rgb(255, 247, 247);
+    --grisicito3:rgb(121, 120, 120);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "MoreEscudero";
+}
+header{    
+    /* AAAAAAAAAAAAAAAA  */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb8b8;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+#parte_de_arriba{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+}
+#polito{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 73px;
+}
+#polito img{
+    margin-left: 36px;
+    margin-top: 5px;
+    width: 70px;
+    height: 80px;
+    /*por ahora polito no esta vacio but keep being my favourtite penguin*/
+}
+#cositas_arribita{
+    list-style: none;
+    display: flex;
+    color: lightblue;
+}
+#cositas_arribita li{
+    margin: 0 10px;
+    
+
+}
+#pepo{
+    display: none;
+}
+#carrito{
+    background-color: transparent;
+    border: none;
+}
+#carrito img{
+    width: 25px;
+    margin-right: 7px;
+}
+#carritoyusuario{
+    display: flex;
+    padding: 7px;
+    margin-right: 50px ;
+}
+#persona img{
+    
+    border: none;
+    background: none;
+}
+.desplegable{
+    display: none;
+    font-size: 18px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px #999 ;
+    padding: 4px;
+    position: absolute;
+    right: 6px;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid #bbb8b8;
+}
+.desplega-lis{
+    display: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow:0px 0px 20px #999 ;
+    padding: 4px;
+    width: 50%;
+    right: 6px;
+    flex-direction: column;
+    list-style: none;
+    border: 1px solid #bbb8b8;
+}
+
+#persona:hover .desplegable{
+    display: flex; 
+}
+#conte-coct:hover .desplega-lis{
+    display: flex;
+}
+#desplegable a:hover{
+    text-decoration: underline;
+}
+#persona img{
+    width: 25px;
+}
+#buscar{
+display: flex;
+align-items: center;
+}
+#barritadecereal{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+}
+#barritadecereal input{
+    outline: none;
+    width: 100%;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 13px;
+    font-size: 0.9rem;
+    background-color: var(--grisicito);
+}
+#barritadecereal button{
+    border-radius: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#lupita{
+    display:flex;
+    padding: 5px 10px;
+    color: black;
+    cursor: pointer;
+    background: transparent;
+    border:none;
+    position: absolute;
+}
+#lupita:hover{
+    color: yellow;
+}
+#texto{
+    text-align:justify;
+    font-family: monospace;
+    color: white;
+}
+#filtros {
+    border: solid 1px var(--grisicito);
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: 220px; /* Ampliado para mejorar el espacio */
+    height: auto; /* Cambiado a auto para ajustarse al contenido */
+    text-align: center;
+    background-color: var(--grisicito2);
+    box-shadow: 0px 0px 10px var(--grisicito);
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-family: "MoreEscudero";
+    border-bottom: 2px solid var(--grisicito);
+    padding-bottom: 5px;
+}
+
+h3.textofiltros {
+    font-size: 16px; /* Aumentado para mejor visibilidad */
+    margin: 20px 0 10px 0; /* Ajustado espaciado */
+    border-top: 1px solid var(--grisicito);
+    border-bottom: 1px solid var(--grisicito);
+    padding: 5px 0; /* Espaciado adicional */
+    color: var(--grisicito3); /* Color de texto mejorado */
+}
+
+.filtrinios {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.filtrinios div {
+    margin: 10px 0; /* Espaciado entre opciones */
+}
+
+#filtros input[type="checkbox"] {
+    margin-right: 5px; /* Espaciado entre checkbox y etiqueta */
+}
+
+#filtros label {
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    color: grey;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+#filtros input[type="checkbox"]:hover + label {
+    color: #007bff; /* Cambia el color al pasar el mouse */
+}
+
+#filtros input[type="checkbox"]:checked + label {
+    font-weight: bold; /* Resaltar texto si está seleccionado */
+}
+
+/* Estilos para hacer que los filtros sean responsivos */
+@media (max-width: 768px) {
+    #filtros {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+    }
+}
+
+.productos{
+    display: flex;
+    border:solid 0.2px;
+    border-color: var(--grisicito);
+    margin-right: 30px;
+
+}
+.productos:hover{
+    background-color:var(--grisicito);
+}
+#pagina{
+    display: flex;
+}
+
+.producto_nombre{
+    font-family: "MoreEscudero";
+    font-weight: 100;
+    color:rgb(49, 49, 49);
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.producto_data{
+    width: 200px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.product {
+    flex: 1 0 20%;
+    text-align: center;
+    margin: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position:static;
+    transform: translateY(50%);
+    background-color: rgba(230, 227, 227, 0.7);
+    border: none;
+    cursor: pointer;
+    width: 2%;
+}
+footer{
+    
+    width: 100%;
+    height: 180px;
+    border-top:solid 1px;
+    border-color: var(--grisicito);
+    background-color: var(--grisicito2);
+}
+#futigod{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.ayuda{
+    width: 25%;
+    height: 90%;
+    padding-left: 20px;
+    margin-top: 15px;    display: block;
+
+
+}
+.pr{
+    display: flex;
+}
+.producto_nuevo_precio {
+    color: var(--grisicito3); /* Gris claro */
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.nuevo_precio {
+    color: black;
+    font-weight: bold;
+}
+#lista-ayuda{
+    list-style: none;
+}
+
+#lista-acerca{
+    list-style: none;
+}
+.foto-suger{
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+#line-down{
+    padding-top: 5px;
+    display: flex;
+    margin-left: 2vw;
+}
+#partecentraleizquierda{
+    display: flex;
+    flex-direction: column;
+}
+#descuento{
+    padding-bottom: 20px;
+    text-align: center;
+}
+#partecentraleizquierda h2{
+    border-color: white;
+    text-align: center;
+}
+#carruseles{
+    width: 100%;
+}
+.carousel-controlnext{
+    right: 1px;
+}
+.carousel-controlprev{
+    left: 1px;
+}
+/* Estilos generales para el carrusel */
+.carousel {
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Borde ligero alrededor del carrusel */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Contenedor interno del carrusel */
+.carousel-inner {
+    display: flex;
+    display: block;
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+/* Elementos individuales del carrusel */
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa el ancho completo */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    padding: 10px; /* Espaciado interno */
+    width: 80%; /* Cada item ocupa el ancho completo */
+}
+
+/* Estilos para los productos dentro del carrusel */
+.productos {
+    background-color: #fff; /* Fondo blanco para cada producto */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    transition: transform 0.2s; /* Efecto de transformación */
+    margin: 30px; /* Espaciado entre productos */
+}
+
+.productos:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+.producto_data a {
+    text-decoration: none !important; /* Elimina el subrayado */
+    color: inherit !important; /* Hereda el color del texto del contenedor */
+}
+/* Imagen del producto */
+.producto_imagen {
+    width: 200px;
+    height: 180px;
+    border-bottom: 1px solid #ddd; /* Línea inferior para separación */
+}
+
+/* Nombre del producto */
+.producto_nombre {
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    text-align: left; /* Centrar texto */
+}
+
+/* Precios */
+.producto_precio,
+.nuevo_precio {
+    display: block; /* Cada precio en su propia línea */
+    text-align: left; /* Centrar texto */
+}
+
+
+.nuevo_precio {
+    color: #e74c3c; /* Color rojo para el nuevo precio */
+    font-weight: bold; /* Negrita para destacar */
+}
+
+/* Botones de control */
+.carousel-controlprev,
+.carousel-controlnext {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar la posición */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado */
+    border-radius: 50%; /* Botones redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    z-index: 1; /* Asegurar que estén por encima de otros elementos */
+}
+
+.carousel-controlprev {
+    left: 10px; /* Desplazar a la izquierda */
+}
+
+.carousel-controlnext {
+    right: 10px; /* Desplazar a la derecha */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .productos {
+        margin: 10px; /* Espaciado entre productos en móviles */
+    }
+
+    .producto_nombre {
+        font-size: 1em; /* Tamaño de fuente más pequeño en móviles */
+    }
+}
+#cositas_arribita button{
+    background-color: transparent;
+    border: none;
+    color: lightblue;
+    list-style: none;
+    font-size: medium;
+}
+
+.te-nervios-pint{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
