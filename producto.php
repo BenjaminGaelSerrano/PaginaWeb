@@ -19,12 +19,13 @@
                         <input type="text" placeholder="Buscar...">
                         <button id="lupita">
                         <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                 </div>
             </div>
             <div id="cositas_arriba">
                 <ul id="cositas_arribita">
-                    <li> <a class="unline-cla" href="http://localhost/PaginaWeb/index1.php">Inicio</a></li>
+                    <li><a class="unline-cla" href="http://localhost/index1.php">Inicio</a></li>
                     <li>Productos</li>
                     <li>Contacto</li>
                 </ul>
@@ -70,7 +71,6 @@
             }
             ?>
                 <div class="thumbnail-container">
-                    <!-- Aquí puedes agregar las miniaturas si tienes imágenes adicionales -->
                     <img src="/PaginaWeb/imagenes/<?php echo $producto['min1']; ?>" alt="Miniatura" class="thumbnail">
                     <img src="/PaginaWeb/imagenes/<?php echo $producto['min2']; ?>" alt="Miniatura" class="thumbnail">
                     <img src="/PaginaWeb/imagenes/<?php echo $producto['min3']; ?>" alt="Miniatura" class="thumbnail">
@@ -93,7 +93,8 @@
                         <option>XL</option>
                     </select>
                 </div>
-                <button class="add-to-cart">Añadir al Carrito</button>
+                <button class="add-to-cart" data-id="<?php echo $producto['ID_producto']; ?>">Añadir al Carrito</button>
+
             </div>
         </div>
     </main>      

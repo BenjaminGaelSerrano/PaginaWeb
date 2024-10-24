@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const mainImage = document.getElementById('main-image');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-    thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', function() {
-            mainImage.src = this.src;
-            thumbnails.forEach(t => t.style.borderColor = 'transparent');
-            this.style.borderColor = 'var(--colorcito)';
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.getAttribute('data-id');
+
+            fetch('add_to_cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: productId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Producto agregado al carrito');
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ocurrió un error al agregar el producto.');
+            });
         });
     });
 });

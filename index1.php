@@ -38,7 +38,7 @@
 </div>
 
             <div id="carritoyusuario">
-                <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+                <a href="http://localhost/carrito.php"><button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button></a>
                 <div id="persona">
                     <img src="/imagenes/avatar.png" alt="persona">
                     <ul class="desplegable">
