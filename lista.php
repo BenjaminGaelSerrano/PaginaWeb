@@ -5,38 +5,31 @@
     <link rel="stylesheet" href="stylis.css">
     <link rel="stylesheet" href="fonts.css">
     <script src="https://kit.fontawesome.com/63b835f25a.js" crossorigin="anonymous"></script>
-    <meta http-equiv="X-UA-Compatibttfle" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>produlis.desd.com.ar</title>
 </head>
 <body>
-    <header><!--header gris con una sombra-->
+    <header>
         <div id="parte_de_arriba">
-            
             <div id="polito">
                 <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
                     <div id="barritadecereal">
                         <input type="text" placeholder="Buscar...">
                         <button id="lupita">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </div>
                 </div>
             </div>
             <div id="cositas_arriba">
-    <ul id="cositas_arribita">
-        <li>
-            <a href="http://localhost/index1.php"><button>Inicio</button></a>
-        </li>
-        <li>
-            <a href="http://localhost/lista.php"><button>Productos</button></a>
-        </li>
-        <li>
-            Contacto
-        </li>
-    </ul>
-</div>
-
+                <ul id="cositas_arribita">
+                    <li><a href="http://localhost/index1.php"><button>Inicio</button></a></li>
+                    <li><a href="http://localhost/lista.php"><button>Productos</button></a></li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
             <div id="carritoyusuario">
                 <button id="carrito"><img src="/PaginaWeb/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
                 <div id="persona">
@@ -46,155 +39,141 @@
                         <li><a href="form.html">Registrarse</a></li>
                     </ul>
                 </div>
-                
             </div>
         </div>
     </header>
+
     <main>
         <div id="pagina">
-        <form method="GET" action="http://localhost/producto.php">
-            <div id="filtros">
-                <h2>FILTROS</h2><br>
-                <h3 class="textofiltros">DEPORTE</h3>
-                <div class="filtrinios">
-                    <div>
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Fútbol</label>
+            <!-- Formulario con filtros -->
+            <form method="GET" action="http://localhost/lista.php">
+                <div id="filtros">
+                    <h2>FILTROS</h2><br>
+
+                    <!-- Filtros de deporte -->
+                    <h3 class="textofiltros">DEPORTE</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="deporte" name="deporte[]" value="Fútbol">
+                            <label for="deporte">Fútbol</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="deporte" name="deporte[]" value="Basquet">
+                            <label for="deporte">Basquet</label>
+                        </div>
+                        <!-- Otros deportes... -->
                     </div>
-                    <div>
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Basquet</label>
+
+                    <!-- Filtros de color -->
+                    <h3 class="textofiltros">COLOR</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="color" name="color[]" value="Verde">
+                            <label for="color">Verde</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="color" name="color[]" value="Rojo">
+                            <label for="color">Rojo</label>
+                        </div>
+                        <!-- Otros colores... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Hockey</label>
+
+                    <!-- Filtros de marca -->
+                    <h3 class="textofiltros">MARCA</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="marca" name="marca[]" value="Adidas">
+                            <label for="marca">Adidas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="marca" name="marca[]" value="Nike">
+                            <label for="marca">Nike</label>
+                        </div>
+                        <!-- Otras marcas... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Volley</label>
+
+                    <!-- Filtros de género -->
+                    <h3 class="textofiltros">GÉNERO</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="genero" name="genero[]" value="Femenino">
+                            <label for="genero">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="genero" name="genero[]" value="Masculino">
+                            <label for="genero">Masculino</label>
+                        </div>
+                        <!-- Otros géneros... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Golf</label>
-                    </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Rugby</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">COLOR</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="color">
-                        <label for="color">Verde</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Rojo</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Amarillo</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Violeta</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Naranja</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color"> Negro</label>
-                    </div>    
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Blanco</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Marron</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">MARCA</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Adidas</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Nike</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Under Armour</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Puma</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Jordan</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Topper</label>
-                    </div>    
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">New Balance</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Fila</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">GENERO</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Femenino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Masculino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Ninguno</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">niño/a</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">bebe</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Unisex</label>
-                    </div>
-                </div>        
+
+                    <!-- Botón para aplicar los filtros -->
+                    <button type="submit" id="btn-aplicar-filtros">Aplicar Filtros</button>
+                </div>
+            </form>
+
+            <div id="te-nervios-pint">
+                <?php
+                $servername = "127.0.0.1";
+                $database = "Pagina_web";
+                $username = "root";
+                $password = ""; // Cambiar el username según tu configuración
+                $conexion = mysqli_connect($servername, $username, $password, $database);
+
+                if (!$conexion) {
+                    die("Conexión fallida: " . mysqli_connect_error());
+                } else {
+                    $query = "SELECT productos.*, ofertas.monto_des, productos.precio - (productos.precio * ofertas.monto_des / 100) AS precio_nuevo 
+                            FROM productos 
+                            LEFT JOIN ofertas ON productos.id_descuento = ofertas.id_descuento";
+
+                    // Aplicar filtros si los hay
+                    $filtros = [];
+                    if (!empty($_GET['deporte'])) {
+                        $deportes = implode("','", $_GET['deporte']);
+                        $filtros[] = "productos.deporte IN ('$deportes')";
+                    }
+                    if (!empty($_GET['color'])) {
+                        $colores = implode("','", $_GET['color']);
+                        $filtros[] = "productos.color IN ('$colores')";
+                    }
+                    if (!empty($_GET['marca'])) {
+                        $marcas = implode("','", $_GET['marca']);
+                        $filtros[] = "productos.marca IN ('$marcas')";
+                    }
+                    if (!empty($_GET['genero'])) {
+                        $generos = implode("','", $_GET['genero']);
+                        $filtros[] = "productos.genero IN ('$generos')";
+                    }
+
+                    if (count($filtros) > 0) {
+                        $query .= " WHERE " . implode(" AND ", $filtros);
+                    }
+
+                    $resultados = mysqli_query($conexion, $query);
+                }
+
+                // Mostrar productos
+                while ($fila = mysqli_fetch_assoc($resultados)) {
+                ?>
+                    <article class="producto_data">
+                        <a href="http://localhost/producto.php?id=<?php echo $fila['ID_producto']; ?>">
+                            <img class="producto_imagen" src="<?php echo $fila['imagen']; ?>" alt="Imagen del producto">
+                            <h3 class="producto_nombre"><?php echo $fila['descripcion']; ?></h3>
+                            <div class="pr">
+                                <?php if ($fila['monto_des'] != null) { ?>
+                                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                                    <span class="producto_precio"><s>$<?php echo $fila['precio']; ?></s></span>
+                                <?php } else { ?>
+                                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                                <?php } ?>
+                            </div>
+                        </a>
+                    </article>
+                <?php
+                }
+                ?>
             </div>
-        </form>
-        <?php
-            $servername = "127.0.0.1";
-            $database = "Pagina_web";
-            $username = "root";
-            $password = "";//se cambia el username entre notebook de san y compu del el cole
-            $conexion = mysqli_connect($servername, $username, $password, $database);
-            if (!$conexion) {
-                die("Conexion fallida: " . mysqli_connect_error());
-            }
-            else{
-                $query = "select *, from productos;";
-                $resultados=mysqli_query($conexion, $query);
-            }?>
-            
+        </div>
     </main>
     <footer>
         <div id="futigod">
