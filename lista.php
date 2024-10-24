@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="stylis.css">
     <link rel="stylesheet" href="fonts.css">
     <script src="https://kit.fontawesome.com/63b835f25a.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatibttfle" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deporweb.desd.com.ar</title>
+    <title>produlis.desd.com.ar</title>
 </head>
 <body>
     <header><!--header gris con una sombra-->
@@ -29,7 +29,7 @@
             <a href="http://localhost/index1.php"><button>Inicio</button></a>
         </li>
         <li>
-            <a href="http://localhost/producto.php"><button>Productos</button></a>
+            <a href="http://localhost/lista.php"><button>Productos</button></a>
         </li>
         <li>
             Contacto
@@ -181,6 +181,20 @@
                 </div>        
             </div>
         </form>
+        <?php
+            $servername = "127.0.0.1";
+            $database = "Pagina_web";
+            $username = "root";
+            $password = "";//se cambia el username entre notebook de san y compu del el cole
+            $conexion = mysqli_connect($servername, $username, $password, $database);
+            if (!$conexion) {
+                die("Conexion fallida: " . mysqli_connect_error());
+            }
+            else{
+                $query = "select *, from productos;";
+                $resultados=mysqli_query($conexion, $query);
+            }?>
+            
     </main>
     <footer>
         <div id="futigod">
