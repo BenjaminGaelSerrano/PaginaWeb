@@ -220,7 +220,7 @@ h3.textofiltros {
     display: flex;
     border:solid 0.2px;
     border-color: var(--grisicito);
-    margin-right: 30px;
+    margin-right: 10px;
 
 }
 .productos:hover{
@@ -379,7 +379,7 @@ footer{
     border-radius: 8px; /* Bordes redondeados */
     overflow: hidden; /* Oculta el desbordamiento */
     transition: transform 0.2s; /* Efecto de transformación */
-    margin: 30px; /* Espaciado entre productos */
+    margin: 20px; /* Espaciado entre productos */
 }
 
 .productos:hover {
@@ -442,7 +442,7 @@ footer{
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     .productos {
-        margin: 10px; /* Espaciado entre productos en móviles */
+        margin: 5px; /* Espaciado entre productos en móviles */
     }
 
     .producto_nombre {

@@ -155,20 +155,22 @@
                 // Mostrar productos
                 while ($fila = mysqli_fetch_assoc($resultados)) {
                 ?>
-                    <article class="producto_data">
-                        <a href="http://localhost/producto.php?id=<?php echo $fila['ID_producto']; ?>">
-                            <img class="producto_imagen" src="<?php echo $fila['imagen']; ?>" alt="Imagen del producto">
-                            <h3 class="producto_nombre"><?php echo $fila['descripcion']; ?></h3>
-                            <div class="pr">
-                                <?php if ($fila['monto_des'] != null) { ?>
-                                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
-                                    <span class="producto_precio"><s>$<?php echo $fila['precio']; ?></s></span>
-                                <?php } else { ?>
-                                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
-                                <?php } ?>
-                            </div>
-                        </a>
-                    </article>
+                    <div class="productos">
+                        <article class="producto_data">
+                            <a href="http://localhost/producto.php?id=<?php echo $fila['ID_producto']; ?>">
+                                <img class="producto_imagen" src="<?php echo $fila['imagen']; ?>" alt="Imagen del producto">
+                                <h3 class="producto_nombre"><?php echo $fila['descripcion']; ?></h3>
+                                <div class="pr">
+                                    <?php if ($fila['monto_des'] != null) { ?>
+                                        <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                                        <span class="producto_precio"><s>$<?php echo $fila['precio']; ?></s></span>
+                                    <?php } else { ?>
+                                        <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                                    <?php } ?>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
                 <?php
                 }
                 ?>
