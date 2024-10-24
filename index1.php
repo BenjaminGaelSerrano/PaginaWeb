@@ -29,7 +29,7 @@
             <a href="http://localhost/index1.php"><button>Inicio</button></a>
         </li>
         <li>
-            <a href="http://localhost/producto.php"><button>Productos</button></a>
+            <a href="http://localhost/lista.php"><button>Productos</button></a>
         </li>
         <li>
             Contacto
