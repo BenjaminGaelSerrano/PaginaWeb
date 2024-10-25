@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cantidad = 1; // Ajusta según sea necesario
 
     $servername = "127.0.0.1";
-    $database = "Pagina_web";
+    $database = "PaginaWeb";
     $username = "alumno";
     $password = "alumnoipm";
     $conexion = mysqli_connect($servername, $username, $password, $database);

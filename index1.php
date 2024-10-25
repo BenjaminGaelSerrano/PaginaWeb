@@ -194,9 +194,9 @@
                         <div class="carousel-item">
                         <?php
             $servername = "127.0.0.1";
-            $database = "Pagina_web";
-            $username = "root";
-            $password = "";//se cambia el username entre notebook de san y compu del el cole
+            $database = "PaginaWeb";
+            $username = "alumno";
+            $password = "alumnoipm";//se cambia el username entre notebook de san y compu del el cole
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
@@ -247,17 +247,18 @@
                             <div class="carousel-item">
                                 <?php
                                 $servername = "127.0.0.1";
-                                $database = "Pagina_web";
-                                $username = "root";
-                                $password = "";
+                                $database = "PaginaWeb";
+                                $username = "alumno";
+                                $password = "alumnoipm";
                                 $conexion = mysqli_connect($servername, $username, $password, $database);
                                 if (!$conexion) {
                                     die("Conexion fallida: " . mysqli_connect_error());
                                 }
                                 else{
-                                    $query = "SELECT p.*, COUNT(c.ID_producto_producto) AS total_compras
+                                    $query = "SELECT p.*,monto_des,precio-(precio*monto_des)/100 as precio_nuevo,COUNT(c.ID_producto_producto) AS total_compras
                                     FROM productos p
                                     JOIN compra c ON p.ID_producto = c.ID_producto_producto
+                                    left join ofertas o on p.id_descuento = o.id_descuento
                                     GROUP BY p.ID_producto
                                     ORDER BY total_compras DESC
                                     LIMIT 15;"; // Asumiendo que tienes una columna 'ventas'
@@ -274,7 +275,14 @@
                                             <a href="producto.php?id=<?php echo $fila['ID_producto']; ?>">
                                             <img class="producto_imagen" src="<?php echo $fila["imagen"]?>" alt="<?php echo $fila["descripcion"]?>">
                                             <h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
-                                            <span class="producto_precio">$<?php echo $fila["precio"]?></span>
+                                            <div class="pr">
+                <?php if ($fila['monto_des'] != null) { ?>
+                    <span class="producto_nuevo_precio">$<?php echo $fila['precio']; ?></span>
+                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                <?php } else { ?>
+                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                <?php } ?>
+            </div>
                                             </a>
                                         </article>
                                     </div>

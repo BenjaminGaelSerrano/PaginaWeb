@@ -15,12 +15,12 @@
             <div id="polito">
                 <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
-                    <form method="GET" action="http://localhost/lista.php" id="barritadecereal">
-                        <input type="text" name="busqueda" placeholder="Buscar...">
-                        <button id="lupita" type="submit">
+                    <div id="barritadecereal">
+                        <input type="text" placeholder="Buscar...">
+                        <button id="lupita">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div id="cositas_arriba">
@@ -49,6 +49,7 @@
             <form method="GET" action="http://localhost/lista.php">
                 <div id="filtros">
                     <h2>FILTROS</h2><br>
+
                     <!-- Filtros de deporte -->
                     <h3 class="textofiltros">DEPORTE</h3>
                     <div class="filtrinios">
@@ -62,6 +63,7 @@
                         </div>
                         <!-- Otros deportes... -->
                     </div>
+
                     <!-- Filtros de color -->
                     <h3 class="textofiltros">COLOR</h3>
                     <div class="filtrinios">
@@ -75,6 +77,7 @@
                         </div>
                         <!-- Otros colores... -->
                     </div>
+
                     <!-- Filtros de marca -->
                     <h3 class="textofiltros">MARCA</h3>
                     <div class="filtrinios">
@@ -88,6 +91,7 @@
                         </div>
                         <!-- Otras marcas... -->
                     </div>
+
                     <!-- Filtros de género -->
                     <h3 class="textofiltros">GÉNERO</h3>
                     <div class="filtrinios">
@@ -101,6 +105,7 @@
                         </div>
                         <!-- Otros géneros... -->
                     </div>
+
                     <!-- Botón para aplicar los filtros -->
                     <button type="submit" id="btn-aplicar-filtros">Aplicar Filtros</button>
                 </div>
@@ -109,17 +114,17 @@
             <div id="te-nervios-pint">
                 <?php
                 $servername = "127.0.0.1";
-                $database = "Pagina_web";
-                $username = "root";
-                $password = ""; // Cambiar el password según tu configuración
+                $database = "PaginaWeb";
+                $username = "alumno";
+                $password = "alumnoipm"; // Cambiar el username según tu configuración
                 $conexion = mysqli_connect($servername, $username, $password, $database);
 
                 if (!$conexion) {
                     die("Conexión fallida: " . mysqli_connect_error());
                 } else {
                     $query = "SELECT productos.*, ofertas.monto_des, productos.precio - (productos.precio * ofertas.monto_des / 100) AS precio_nuevo 
-                              FROM productos 
-                              LEFT JOIN ofertas ON productos.id_descuento = ofertas.id_descuento";
+                            FROM productos 
+                            LEFT JOIN ofertas ON productos.id_descuento = ofertas.id_descuento";
 
                     // Aplicar filtros si los hay
                     $filtros = [];
@@ -138,12 +143,6 @@
                     if (!empty($_GET['genero'])) {
                         $generos = implode("','", $_GET['genero']);
                         $filtros[] = "productos.genero IN ('$generos')";
-                    }
-
-                    // Filtro de búsqueda
-                    if (!empty($_GET['busqueda'])) {
-                        $busqueda = mysqli_real_escape_string($conexion, $_GET['busqueda']);
-                        $filtros[] = "productos.descripcion LIKE '%$busqueda%'";
                     }
 
                     if (count($filtros) > 0) {

@@ -124,19 +124,27 @@ session_start(); // Inicia la sesión al principio del archivo
 
     <script>
         function updateQuantity(id, quantity) {
-            fetch('update_cart.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ id: id, quantity: quantity })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Actualiza el carrito según la respuesta
-                location.reload();
-            });
+    fetch('update_cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: id, quantity: quantity })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Actualiza el carrito según la respuesta
+            location.reload(); // Recarga la página para mostrar los cambios
+        } else {
+            alert(data.message); // Muestra el mensaje de error
         }
+    })
+    .catch(error => {
+        alert('Error: ' + error.message); // Manejo de errores
+    });
+}
+
 
         function removeItem(id) {
             fetch('remove_item.php', {

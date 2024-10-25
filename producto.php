@@ -47,9 +47,9 @@
             <div id="col-fot">
             <?php
             $servername = "127.0.0.1";
-            $database = "Pagina_web";
-            $username = "root";
-            $password = "";
+            $database = "PaginaWeb";
+            $username = "alumno";
+            $password = "alumnoipm";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexión fallida: " . mysqli_connect_error());
@@ -59,7 +59,15 @@
             $id_producto = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
             // Consulta SQL para obtener los detalles del producto
-            $query = "SELECT * FROM productos WHERE ID_producto = $id_producto";
+            $query = "select p.*, 
+            m.monto_des, 
+            p.precio - (p.precio * m.monto_des) / 100 AS precio_nuevo 
+        FROM 
+            productos p 
+        LEFT JOIN 
+            ofertas m ON p.ID_producto = m.producto_id 
+        WHERE 
+            p.ID_producto = id_producto;";
             $resultados = mysqli_query($conexion, $query);
 
             // Verificar si se obtuvo el producto
@@ -82,7 +90,14 @@
             </div>
             <div id="product-details">
                 <h1><?php echo $producto['descripcion']; ?></h1>
-                <p class="price">$<?php echo $producto['precio']; ?></p>
+                <div class="pr">
+                <?php if ($fila['monto_des'] != null) { ?>
+                    <span class="producto_nuevo_precio">$<?php echo $fila['precio']; ?></span>
+                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                <?php } else { ?>
+                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                <?php } ?>
+            </div>
                 <p class="description"><?php echo $producto['marca']; ?></p>
                 <div class="product-options">
                     <label for="size">Talla:</label>
