@@ -48,8 +48,8 @@
             <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "alumno";
-            $password = "alumnoipm";
+            $username = "root";
+            $password = "";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexión fallida: " . mysqli_connect_error());
@@ -132,9 +132,9 @@
             </div>
         </div>
         <div id="line-down">
-            <div id="only-for">
-                <p>Copyright © Instituto Politécnico Modelo</p>
-            </div>
+            
+            <p>Copyright © Instituto Politécnico Modelo</p>
+            
         </div>
     </footer>
     <script src="produc.js"></script>
