@@ -242,18 +242,12 @@ h3.textofiltros {
 }
 .producto_data{
     width: 200px;
+    height: 240px;
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-}
 
-.carousel-item {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
+
+
 
 .product {
     flex: 1 0 20%;
@@ -266,14 +260,7 @@ h3.textofiltros {
     height: auto;
 }
 
-.carousel-control {
-    position:static;
-    transform: translateY(50%);
-    background-color: rgba(230, 227, 227, 0.7);
-    border: none;
-    cursor: pointer;
-    width: 2%;
-}
+
 
 .pr{
     display: flex;
@@ -344,6 +331,7 @@ h3.textofiltros {
     overflow: hidden; /* Oculta el desbordamiento */
     transition: transform 0.2s; /* Efecto de transformación */
     margin: 20px; /* Espaciado entre productos */
+    height: 240px;
 }
 
 .productos:hover {
