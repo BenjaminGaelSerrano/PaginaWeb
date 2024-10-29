@@ -114,9 +114,9 @@
             <div id="te-nervios-pint">
                 <?php
                 $servername = "127.0.0.1";
-                $database = "PaginaWeb";
-                $username = "alumno";
-                $password = "alumnoipm"; // Cambiar el username según tu configuración
+                $database = "Pagina_web";
+                $username = "root";
+                $password = ""; // Cambiar el username según tu configuración
                 $conexion = mysqli_connect($servername, $username, $password, $database);
 
                 if (!$conexion) {

@@ -13,8 +13,8 @@ tr, td{padding :5px}
     $password1 = $_POST["contraseña"];
     $servername = "127.0.0.1";
     $database = "Pagina_web";
-    $username = "alumno";
-    $password = "alumnoipm";
+    $username = "root";
+    $password = "";
 
     $conexion = mysqli_connect($servername, $username, $password, $database);
 

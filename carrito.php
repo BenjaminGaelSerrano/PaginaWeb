@@ -85,30 +85,26 @@ session_start(); // Inicia la sesión al principio del archivo
             <div class="ayuda">
                 <h2>Ayuda</h2>
                 <ul id="lista-ayuda">
-                    <li class="li-sheiju">carlos</li>
-                    <li class="li-sheiju">te pusiste nerviosa?</li>
-                    <li class="li-sheiju">cavani</li>
-                    <li class="li-sheiju">gabibol</li>
+                    <li>carlos</li>
+                    <li>te felicito</li>
+                    <li>miguel merentiel</li>
+                    <li>gabibol</li>
                 </ul>
             </div>
             <div class="ayuda">
                 <h2>Acerca de nosotros</h2>
                 <ul id="lista-acerca">
                     <div id="conte-coct">
-                        <li id="mov-kolu">Contáctanos</li>
-                        <ul class="desplega-lis">
-                            <li>+54 9 11 2738 7367</li>
-                        </ul>
+                        <li id="mov-kolu">Contactanos</li>
+                        
                     </div>
-                    <li>Nuestra historia</li>
+                    <li>nuestra historia</li>
                 </ul>
             </div>
             <div class="ayuda">
-                <h2>Síguenos</h2>
-                <div id="on-image">
-                    <a href="#"><img class="foto-suger" src="/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
-                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/imagenes/twitter-logo-1.png" alt="twitter"></a>
-                </div>
+                <h2>Seguinos</h2>
+                <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
+                <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
             </div>
             <div class="ayuda">
                 <h2>Políticas y privacidad</h2>
@@ -116,9 +112,9 @@ session_start(); // Inicia la sesión al principio del archivo
             </div>
         </div>
         <div id="line-down">
-            <div id="only-for">
-                <p>Copyright © Instituto Politécnico Modelo</p>
-            </div>
+            
+            <p>Copyright © Instituto Politécnico Modelo</p>
+            
         </div>
     </footer>
 

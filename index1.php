@@ -194,9 +194,9 @@
                         <div class="carousel-item">
                         <?php
             $servername = "127.0.0.1";
-            $database = "PaginaWeb";
-            $username = "alumno";
-            $password = "alumnoipm";//se cambia el username entre notebook de san y compu del el cole
+            $database = "Pagina_web";
+            $username = "root";
+            $password = "";//se cambia el username entre notebook de san y compu del el cole
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
@@ -247,9 +247,9 @@
                             <div class="carousel-item">
                                 <?php
                                 $servername = "127.0.0.1";
-                                $database = "PaginaWeb";
-                                $username = "alumno";
-                                $password = "alumnoipm";
+                                $database = "Pagina_web";
+                                $username = "root";
+                                $password = "";
                                 $conexion = mysqli_connect($servername, $username, $password, $database);
                                 if (!$conexion) {
                                     die("Conexion fallida: " . mysqli_connect_error());

@@ -117,7 +117,7 @@ align-items: center;
     justify-content: flex-end;
     align-items: center;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #34495e;
 }
 #barritadecereal input{
     outline: none;
@@ -126,7 +126,7 @@ align-items: center;
     border: none;
     border-radius: 13px;
     font-size: 0.9rem;
-    background-color: var(--grisicito);
+    background-color: #a6b8ca;
 }
 #barritadecereal button{
     border-radius: 5px;

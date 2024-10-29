@@ -17,8 +17,11 @@
         $query = "select contraseña from usuario where mail = '$mail';"; 
         $resultado=mysqli_query($conexion, $query);
         $fila = mysqli_fetch_assoc($resultado);
+        $query2 = "select nombre_de_usuario from usuario where mail = '$mail';";
+        $resultado=mysqli_query($conexion, $query2);
+        $fila2=mysqli_fetch_assoc($resultado);
         if ($password1 == $fila['contraseña']) {
-        
+            $_SESSION['nombre']= $fila2['nombre_de_usuario'];
             header("location: http://localhost/paginawe/Paginaweb/index1.php");
         }else {
             echo "<p style='color:red;'>algo nda mal. Inténtalo de nuevo.</p>";

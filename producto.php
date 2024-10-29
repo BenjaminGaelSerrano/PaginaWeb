@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <div id="carritoyusuario">
-                <button id="carrito"><img src="/PaginaWeb/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+            <a href="http://localhost/carrito.php"><button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button></a>
                 <div id="persona">
                     <img src="/PaginaWeb/imagenes/avatar.png" alt="persona">
                     <ul class="desplegable">
@@ -47,9 +47,9 @@
             <div id="col-fot">
             <?php
             $servername = "127.0.0.1";
-            $database = "PaginaWeb";
-            $username = "alumno";
-            $password = "alumnoipm";
+            $database = "Pagina_web";
+            $username = "root";
+            $password = "";
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexión fallida: " . mysqli_connect_error());
@@ -91,11 +91,11 @@
             <div id="product-details">
                 <h1><?php echo $producto['descripcion']; ?></h1>
                 <div class="pr">
-                <?php if ($fila['monto_des'] != null) { ?>
-                    <span class="producto_nuevo_precio">$<?php echo $fila['precio']; ?></span>
-                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                <?php if ($producto['monto_des'] != null) { ?>
+                    <span class="producto_nuevo_precio">$<?php echo $producto['precio']; ?></span>
+                    <span class="nuevo_precio">$<?php echo (int) $producto['precio_nuevo']; ?></span>
                 <?php } else { ?>
-                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                    <span class="producto_precio">$<?php echo $producto['precio']; ?></span>
                 <?php } ?>
             </div>
                 <p class="description"><?php echo $producto['marca']; ?></p>
@@ -129,9 +129,7 @@
                 <ul id="lista-acerca">
                     <div id="conte-coct">
                         <li id="mov-kolu">Contactanos</li>
-                        <ul class="desplega-lis">
-                            <li>+54 9 11 2738 7367</li>
-                        </ul>
+                        
                     </div>
                     <li>nuestra historia</li>
                 </ul>
@@ -143,7 +141,9 @@
             </div>
             <div class="ayuda">
                 <h2>Políticas y privacidad</h2>
-                <ul id="lista-acerca"></ul>
+                <ul id="lista-acerca">
+                    
+                </ul>
             </div>
         </div>
         <div id="line-down">
