@@ -226,3 +226,7 @@ footer {
         font-size: 20px;
     }
 }
+.li-sheiju {
+    text-decoration: none;
+    color: rgb(176, 217, 241);
+}
