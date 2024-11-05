@@ -54,134 +54,69 @@
     mejorar la distribuciòn y las fuentes que son una garcha-->
     <main>
         <div id="pagina">
-        <form method="GET" action="http://localhost/producto.php">
-            <div id="filtros">
-                <h2>FILTROS</h2><br>
-                <h3 class="textofiltros">DEPORTE</h3>
-                <div class="filtrinios">
-                    <div>
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Fútbol</label>
+        <form method="GET" action="http://localhost/lista.php">
+                <div id="filtros">
+                    <h2>FILTROS</h2><br>
+
+                    <!-- Filtros de deporte -->
+                    <h3 class="textofiltros">DEPORTE</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="deporte" name="deporte[]" value="Fútbol">
+                            <label for="deporte">Fútbol</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="deporte" name="deporte[]" value="Basquet">
+                            <label for="deporte">Basquet</label>
+                        </div>
+                        <!-- Otros deportes... -->
                     </div>
-                    <div>
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Basquet</label>
+
+                    <!-- Filtros de color -->
+                    <h3 class="textofiltros">COLOR</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="color" name="color[]" value="Verde">
+                            <label for="color">Verde</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="color" name="color[]" value="Rojo">
+                            <label for="color">Rojo</label>
+                        </div>
+                        <!-- Otros colores... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Hockey</label>
+
+                    <!-- Filtros de marca -->
+                    <h3 class="textofiltros">MARCA</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="marca" name="marca[]" value="Adidas">
+                            <label for="marca">Adidas</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="marca" name="marca[]" value="Nike">
+                            <label for="marca">Nike</label>
+                        </div>
+                        <!-- Otras marcas... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Volley</label>
+
+                    <!-- Filtros de género -->
+                    <h3 class="textofiltros">GÉNERO</h3>
+                    <div class="filtrinios">
+                        <div>
+                            <input type="checkbox" class="genero" name="genero[]" value="Femenino">
+                            <label for="genero">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="genero" name="genero[]" value="Masculino">
+                            <label for="genero">Masculino</label>
+                        </div>
+                        <!-- Otros géneros... -->
                     </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Golf</label>
-                    </div>
-                    <div>   
-                        <input type="checkbox" class="deporte">
-                        <label for="deporte">Rugby</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">COLOR</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="color">
-                        <label for="color">Verde</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Rojo</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Amarillo</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Violeta</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Naranja</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color"> Negro</label>
-                    </div>    
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Blanco</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="color">
-                        <label for="color">Marron</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">MARCA</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Adidas</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Nike</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Under Armour</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Puma</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Jordan</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Topper</label>
-                    </div>    
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">New Balance</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="marca">
-                        <label for="marca">Fila</label>
-                    </div>
-                </div>    
-                <h3 class="textofiltros">GENERO</h3>   
-                <div class="filtrinios">
-                    <div>    
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Femenino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Masculino</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Ninguno</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">niño/a</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">bebe</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="genero">
-                        <label for="genero">Unisex</label>
-                    </div>
-                </div>        
-            </div>
+
+                    <!-- Botón para aplicar los filtros -->
+                    <button type="submit" id="btn-aplicar-filtros">Aplicar Filtros</button>
+                </div>
             </form>
             <div id="carruseles">    
                 <div class="carousel">
