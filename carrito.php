@@ -103,8 +103,8 @@ session_start(); // Inicia la sesión al principio del archivo
             </div>
             <div class="ayuda">
                 <h2>Seguinos</h2>
-                <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
-                <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/ig.png" alt="ig"></a>
+                <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter.png" alt="twitter"></a>
             </div>
             <div class="ayuda">
                 <h2>Políticas y privacidad</h2>

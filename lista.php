@@ -15,12 +15,12 @@
             <div id="polito">
                 <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
-                    <div id="barritadecereal">
-                        <input type="text" placeholder="Buscar...">
-                        <button id="lupita">
+                    <form method="GET" action="http://localhost/lista.php" id="barritadecereal">
+                        <input type="text" name="busqueda" placeholder="Buscar...">
+                        <button id="lupita" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div id="cositas_arriba">
@@ -144,6 +144,11 @@
                         $generos = implode("','", $_GET['genero']);
                         $filtros[] = "productos.genero IN ('$generos')";
                     }
+                    // Filtro de búsqueda
+                    if (!empty($_GET['busqueda'])) {
+                        $busqueda = mysqli_real_escape_string($conexion, $_GET['busqueda']);
+                        $filtros[] = "productos.descripcion LIKE '%$busqueda%'";
+                    }
 
                     if (count($filtros) > 0) {
                         $query .= " WHERE " . implode(" AND ", $filtros);
@@ -200,7 +205,7 @@
             <div class="ayuda">
                 <h2>Seguinos</h2>
                 <div id="on-image">
-                    <a href=""><img class="foto-suger" src="/PaginaWeb/imagenes/md_5b321ca3631b8-removebg-preview.png" alt="ig"></a>
+                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter.png" alt="ig"></a>
                     <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="/PaginaWeb/imagenes/twitter-logo-1.png" alt="twitter"></a>
                 </div>
             </div>

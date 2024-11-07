@@ -258,7 +258,7 @@
             <div class="ayuda">
                 <h2>Seguinos</h2>
                 <div id="on-image">
-                    <a href=""><img class="foto-suger" src="/imagenes/twitter.png" alt="ig"></a>
+                    <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="imagenes/twitter.png" alt="ig"></a>
                     <a href="https://www.instagram.com/santiortizzz_/"><img class="foto-suger" src="imagenes/ig.png" alt="twitter"></a>
                 </div>
             </div>
