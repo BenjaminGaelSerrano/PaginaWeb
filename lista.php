@@ -45,12 +45,12 @@
 
     <main>
         <div id="pagina">
-            <!-- Formulario con filtros -->
+            
             <form method="GET" action="http://localhost/lista.php">
                 <div id="filtros">
                     <h2>FILTROS</h2><br>
 
-                    <!-- Filtros de deporte -->
+                    
                     <h3 class="textofiltros">DEPORTE</h3>
                     <div class="filtrinios">
                         <div>
@@ -61,7 +61,7 @@
                             <input type="checkbox" class="deporte" name="deporte[]" value="Basquet">
                             <label for="deporte">Basquet</label>
                         </div>
-                        <!-- Otros deportes... -->
+                        
                     </div>
 
                     <!-- Filtros de color -->
@@ -75,7 +75,7 @@
                             <input type="checkbox" class="color" name="color[]" value="Rojo">
                             <label for="color">Rojo</label>
                         </div>
-                        <!-- Otros colores... -->
+                       
                     </div>
 
                     <!-- Filtros de marca -->
@@ -89,7 +89,7 @@
                             <input type="checkbox" class="marca" name="marca[]" value="Nike">
                             <label for="marca">Nike</label>
                         </div>
-                        <!-- Otras marcas... -->
+                       
                     </div>
 
                     <!-- Filtros de género -->
@@ -103,7 +103,7 @@
                             <input type="checkbox" class="genero" name="genero[]" value="Masculino">
                             <label for="genero">Masculino</label>
                         </div>
-                        <!-- Otros géneros... -->
+                      
                     </div>
 
                     <!-- Botón para aplicar los filtros -->
@@ -116,7 +116,7 @@
                 $servername = "127.0.0.1";
                 $database = "Pagina_web";
                 $username = "root";
-                $password = ""; // Cambiar el username según tu configuración
+                $password = ""; // Cambiar el username para el xampp
                 $conexion = mysqli_connect($servername, $username, $password, $database);
 
                 if (!$conexion) {
@@ -212,7 +212,7 @@
             <div class="ayuda">
                 <h2>Politcas y privacidad</h2>
                 <ul id="lista-acerca"></ul>
-                    <!--si abro un li acordate de poner esta class="li-sheiju"-->
+                    
                 </ul>
     
             </div>

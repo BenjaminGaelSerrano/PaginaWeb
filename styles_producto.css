@@ -180,7 +180,7 @@ main{
     -ms-overflow-style: none; /* Para Internet Explorer y Edge */
 }
 
-/* Ocultar scrollbar para Chrome, Safari y Opera */
+/* Ocultar scrollbar  */
 #col-fot::-webkit-scrollbar {
     display: none;
 }

@@ -69,7 +69,7 @@
                             <input type="checkbox" class="deporte" name="deporte[]" value="Basquet">
                             <label for="deporte">Basquet</label>
                         </div>
-                        <!-- Otros deportes... -->
+                        
                     </div>
 
                     <!-- Filtros de color -->
@@ -83,7 +83,7 @@
                             <input type="checkbox" class="color" name="color[]" value="Rojo">
                             <label for="color">Rojo</label>
                         </div>
-                        <!-- Otros colores... -->
+                        
                     </div>
 
                     <!-- Filtros de marca -->
@@ -97,7 +97,7 @@
                             <input type="checkbox" class="marca" name="marca[]" value="Nike">
                             <label for="marca">Nike</label>
                         </div>
-                        <!-- Otras marcas... -->
+                        
                     </div>
 
                     <!-- Filtros de género -->
@@ -111,7 +111,7 @@
                             <input type="checkbox" class="genero" name="genero[]" value="Masculino">
                             <label for="genero">Masculino</label>
                         </div>
-                        <!-- Otros géneros... -->
+                        
                     </div>
 
                     <!-- Botón para aplicar los filtros -->
@@ -172,7 +172,7 @@
                     <button class="carousel-controlprev" onclick="prevSlide()">&#10094;</button>
                     <button class="carousel-controlnext" onclick="nextSlide()">&#10095;</button>
                 </div>
-                <!-- New carousel for bestsellers -->
+                <!-- bestsellers -->
                 <div class="carousel">
                     <div id="partecentraleizquierda">    
                         <div id="mas-vendidos">
@@ -196,7 +196,7 @@
                                     left join ofertas o on p.id_descuento = o.id_descuento
                                     GROUP BY p.ID_producto
                                     ORDER BY total_compras DESC
-                                    LIMIT 15;"; // Asumiendo que tienes una columna 'ventas'
+                                    LIMIT 15;"; 
                                     $resultados = mysqli_query($conexion, $query);
                                 }
                                 $contador = 1;

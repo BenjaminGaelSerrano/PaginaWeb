@@ -158,13 +158,13 @@ align-items: center;
     border: solid 1px var(--grisicito);
     margin-right: 30px;
     margin-bottom: 10px;
-    width: 220px; /* Ampliado para mejorar el espacio */
-    height: auto; /* Cambiado a auto para ajustarse al contenido */
+    width: 220px; 
+    height: auto; 
     text-align: center;
     background-color: var(--grisicito2);
     box-shadow: 0px 0px 10px var(--grisicito);
-    padding: 10px; /* Espaciado interno */
-    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; 
+    border-radius: 8px; 
 }
 
 h2 {
@@ -176,12 +176,12 @@ h2 {
 }
 
 h3.textofiltros {
-    font-size: 16px; /* Aumentado para mejor visibilidad */
-    margin: 20px 0 10px 0; /* Ajustado espaciado */
+    font-size: 16px; 
+    margin: 20px 0 10px 0; 
     border-top: 1px solid var(--grisicito);
     border-bottom: 1px solid var(--grisicito);
-    padding: 5px 0; /* Espaciado adicional */
-    color: var(--grisicito3); /* Color de texto mejorado */
+    padding: 5px 0; 
+    color: var(--grisicito3); 
 }
 
 .filtrinios {
@@ -194,28 +194,28 @@ h3.textofiltros {
 }
 
 #filtros input[type="checkbox"] {
-    margin-right: 5px; /* Espaciado entre checkbox y etiqueta */
+    margin-right: 5px; 
 }
 
 #filtros label {
-    font-size: 14px; /* Tamaño de fuente ajustado */
+    font-size: 14px; 
     color: grey;
     cursor: pointer; /* Cambiar cursor al pasar por encima */
 }
 
 #filtros input[type="checkbox"]:hover + label {
-    color: #007bff; /* Cambia el color al pasar el mouse */
+    color: #007bff; 
 }
 
 #filtros input[type="checkbox"]:checked + label {
-    font-weight: bold; /* Resaltar texto si está seleccionado */
+    font-weight: bold; 
 }
 
 /* Estilos para hacer que los filtros sean responsivos */
 @media (max-width: 768px) {
     #filtros {
-        width: 100%; /* Ancho completo en pantallas pequeñas */
-        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+        width: 100%; 
+        margin-right: 0; 
     }
 }
 
