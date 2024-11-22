@@ -212,3 +212,92 @@ footer {
         font-size: 20px;
     }
 }
+/* Estilos del footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 30px 0;
+}
+
+#futigod {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ayuda {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.ayuda h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--colorcito);
+}
+
+#lista-ayuda, #lista-acerca {
+    list-style: none;
+}
+
+#lista-ayuda li, #lista-acerca li {
+    margin-bottom: 8px;
+}
+
+#on-image {
+    display: flex;
+    gap: 10px;
+}
+
+.foto-suger {
+    width: 30px;
+    height: 30px;
+}
+
+#line-down {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    #log-in {
+        width: 90%;
+    }
+    
+    .ayuda {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #log-in {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .ayuda {
+        width: 100%;
+    }
+    
+    #futigod {
+        flex-direction: column;
+    }
+    
+    #fotito {
+        height: 100px;
+    }
+    
+    #register {
+        font-size: 20px;
+    }
+}
+.li-sheiju {
+    text-decoration: none;
+    color: rgb(176, 217, 241);
+}
