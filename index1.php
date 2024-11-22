@@ -130,8 +130,8 @@
                         <?php
             $servername = "127.0.0.1";
             $database = "Pagina_web";
-            $username = "root";
-            $password = "";//se cambia el username entre notebook de san y compu del el cole
+            $username = "alumno";
+            $password = "alumnoipm";//se cambia el username entre notebook de san y compu del el cole
             $conexion = mysqli_connect($servername, $username, $password, $database);
             if (!$conexion) {
                 die("Conexion fallida: " . mysqli_connect_error());
@@ -183,8 +183,8 @@
                                 <?php
                                 $servername = "127.0.0.1";
                                 $database = "Pagina_web";
-                                $username = "root";
-                                $password = "";
+                                $username = "alumno";
+                                $password = "alumnoipm";
                                 $conexion = mysqli_connect($servername, $username, $password, $database);
                                 if (!$conexion) {
                                     die("Conexion fallida: " . mysqli_connect_error());
