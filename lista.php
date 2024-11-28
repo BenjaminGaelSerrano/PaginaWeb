@@ -31,9 +31,9 @@
                 </ul>
             </div>
             <div id="carritoyusuario">
-                <button id="carrito"><img src="/PaginaWeb/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
+                <button id="carrito"><img src="/imagenes/cart-alt-regular-240.png" alt="carrito"></button>
                 <div id="persona">
-                    <img src="/PaginaWeb/imagenes/avatar.png" alt="persona">
+                    <img src="/imagenes/avatar.png" alt="persona">
                     <ul class="desplegable">
                         <li><a href="form_sesion.html">Iniciar Sesion</a></li>
                         <li><a href="form.html">Registrarse</a></li>
@@ -162,18 +162,18 @@
                 ?>
                     <div class="productos">
                         <article class="producto_data">
-                            <a href="http://localhost/producto.php?id=<?php echo $fila['ID_producto']; ?>">
-                                <img class="producto_imagen" src="<?php echo $fila['imagen']; ?>" alt="Imagen del producto">
-                                <h3 class="producto_nombre"><?php echo $fila['descripcion']; ?></h3>
-                                <div class="pr">
-                                    <?php if ($fila['monto_des'] != null) { ?>
-                                        <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
-                                        <span class="producto_precio"><s>$<?php echo $fila['precio']; ?></s></span>
-                                    <?php } else { ?>
-                                        <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
-                                    <?php } ?>
-                                </div>
-                            </a>
+                        <a href="producto.php?id=<?php echo $fila['ID_producto']; ?>">
+                                            <img class="producto_imagen" src="<?php echo $fila["imagen"]?>" alt="<?php echo $fila["descripcion"]?>">
+                                            <h3 class="producto_nombre"><?php echo $fila["descripcion"]?></h3>
+                                            <div class="pr">
+                <?php if ($fila['monto_des'] != null) { ?>
+                    <span class="producto_nuevo_precio">$<?php echo $fila['precio']; ?></span>
+                    <span class="nuevo_precio">$<?php echo (int) $fila['precio_nuevo']; ?></span>
+                <?php } else { ?>
+                    <span class="producto_precio">$<?php echo $fila['precio']; ?></span>
+                <?php } ?>
+            </div>
+                                            </a>
                         </article>
                     </div>
                 <?php

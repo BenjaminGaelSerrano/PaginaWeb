@@ -242,7 +242,7 @@ h3.textofiltros {
 }
 .producto_data{
     width: 200px;
-    height: 240px;
+    height: 280px;
 }
 
 
@@ -492,4 +492,87 @@ footer {
 .li-sheiju {
     text-decoration: none;
     color: rgb(176, 217, 241);
+}
+.producto_data {
+    width: 200px; /* Tamaño reducido */
+    height: auto; /* Ajuste dinámico según contenido */
+    display: flex; /* Alinear elementos */
+    flex-direction: column; /* Orden vertical */
+    justify-content: space-between; /* Espaciado uniforme */
+    overflow: hidden; /* Prevenir desbordes */
+    padding: 8px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+    text-align: center; /* Centrar todo */
+}
+
+.productos {
+    display: flex;
+    flex-direction: column; /* Orden vertical */
+    justify-content: space-between; /* Espaciado uniforme */
+    align-items: center; /* Centrar elementos */
+    border: solid 0.2px;
+    border-color: var(--grisicito);
+    margin: 10px; /* Espaciado entre contenedores */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evitar desbordes */
+    padding: 10px; /* Espaciado interno */
+    transition: transform 0.3s ease; /* Suavidad en hover */
+    height: 280px; /* Altura compacta */
+    max-width: 210px; /* Limitar ancho */
+}
+
+.productos:hover {
+    background-color: var(--grisicito);
+    transform: scale(1.05); /* Efecto hover */
+}
+
+.producto_nombre {
+    font-family: "MoreEscudero";
+    font-size: 0.9em; /* Compacto */
+    margin: 5px 0; /* Espaciado ajustado */
+    color: rgb(49, 49, 49);
+    font-weight: 600; /* Negrita leve */
+}
+
+.producto_precio, .nuevo_precio {
+    font-size: 0.85em; /* Compacto */
+    margin: 2px 0; /* Espaciado reducido */
+    color: #333; /* Texto visible */
+    line-height: 1.2; /* Espaciado adecuado entre líneas */
+}
+
+.nuevo_precio {
+    color: #e74c3c; /* Rojo llamativo */
+    font-weight: bold;
+}
+
+.producto_nuevo_precio {
+    color: var(--grisicito3); /* Gris claro */
+    text-decoration: line-through;
+    font-size: 0.8em; /* Compacto */
+}
+
+.product img {
+    max-width: 100%; /* Asegura ajuste dentro del contenedor */
+    height: auto; /* Mantiene proporción */
+    border-radius: 8px; /* Redondeado */
+    margin-bottom: 8px; /* Espaciado inferior */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .productos {
+        margin: 5px;
+        height: auto; /* Altura ajustable */
+        max-width: 180px; /* Menor tamaño en móviles */
+    }
+
+    .producto_nombre {
+        font-size: 0.8em; /* Compacto para móviles */
+    }
+
+    .producto_precio, .nuevo_precio {
+        font-size: 0.75em; /* Más pequeño en móviles */
+    }
 }

@@ -13,7 +13,7 @@
     <header>
         <div id="parte_de_arriba">
             <div id="polito">
-                <img src="/PaginaWeb/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
+                <img src="/imagenes/logodefinitivoOMG.png" alt="logotipo" width="100px" height="100px">
                 <div id="buscar">
                     <div id="barritadecereal">
                         <input type="text" placeholder="Buscar...">
@@ -59,15 +59,15 @@
             $id_producto = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
             // Consulta SQL para obtener los detalles del producto
-            $query = "select p.*, 
+            $query = "SELECT p.*, 
             m.monto_des, 
             p.precio - (p.precio * m.monto_des) / 100 AS precio_nuevo 
-        FROM 
+          FROM 
             productos p 
-        LEFT JOIN 
+          LEFT JOIN 
             ofertas m ON p.ID_producto = m.producto_id 
-        WHERE 
-            p.ID_producto = id_producto;";
+          WHERE 
+            p.ID_producto = $id_producto;";
             $resultados = mysqli_query($conexion, $query);
 
             // Verificar si se obtuvo el producto
@@ -79,14 +79,14 @@
             }
             ?>
                 <div class="thumbnail-container">
-                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min1']; ?>" alt="Miniatura" class="thumbnail">
-                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min2']; ?>" alt="Miniatura" class="thumbnail">
-                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min3']; ?>" alt="Miniatura" class="thumbnail">
-                    <img src="/PaginaWeb/imagenes/<?php echo $producto['min4']; ?>" alt="Miniatura" class="thumbnail">                
+                    <img src="<?php echo $producto['min1']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="<?php echo $producto['min2']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="<?php echo $producto['min3']; ?>" alt="Miniatura" class="thumbnail">
+                    <img src="<?php echo $producto['min4']; ?>" alt="Miniatura" class="thumbnail">                
                 </div>
             </div>
             <div id="f-princi">
-                <img src="/PaginaWeb/imagenes/<?php echo $producto['imagen']; ?>" alt="Imagen principal del producto" id="main-image">
+                <img src="<?php echo $producto['imagen']; ?>" alt="Imagen principal del producto" id="main-image">
             </div>
             <div id="product-details">
                 <h1><?php echo $producto['descripcion']; ?></h1>

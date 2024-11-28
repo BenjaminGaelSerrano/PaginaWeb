@@ -23,7 +23,7 @@ if (!$conexion) {
 
     if ($password1 == $fila['contraseña']) {
         $_SESSION['nombre'] = $fila2['nombre_de_usuario'];
-        header("Location: http://localhost/paginawe/Paginaweb/index1.php");
+        header("Location: http://localhost/index1.php");
         exit(); 
     } else {
         echo "<p style='color:red;'>Algo ha ido mal. Inténtalo de nuevo.</p>";
